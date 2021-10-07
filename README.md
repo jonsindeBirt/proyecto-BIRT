@@ -17,7 +17,7 @@ Al trabajar en nuestras ramas personales y actualizar la rama principal únicame
 
 Esto es normal, ya que no todas las partes de una aplicación se desarrollan a la misma velocidad (y más en este proyecto, en el que cada uno tendremos nuestro propio horario). Para evitar (o minimizar) problemas o conflictos en el código, ya sea a nosotros mismos o a quien venga detrás, antes de pasar nuestros cambios a la rama principal nos aseguraremos de TRAER los cambios de la rama principal a la nuestra propia. Una vez incluídos, pasaremos los cambios a la rama principal.
 
-### ¿Cómo haremos esto?
+## ¿Cómo haremos esto?
 
 ¿Cómo haremos todo lo comentado: Crear una rama, desarrollar, traer los cambios de la rama **principal**, pasar nuestros cambios a dicha rama **principal**...? Es más sencillo de lo que parece. Solo necesitaremos unos cuantos comandos y perder el miedo a GIT. (Los IDEs actuales traen integración con **git**, por lo que no siquiera haría falta conocer los comandos)
 
@@ -34,12 +34,12 @@ Esto es normal, ya que no todas las partes de una aplicación se desarrollan a l
 
 - `git add .` "Preparamos" los cambios para ser guardados.
 - `git commit -m *mensaje explicativo*`. Con esto lo que haremos será guardar en el repositorio los cambios añadidos en el paso anterior. Junto con los cambios se guardará el mensaje que hemos indicado, por lo que trataremos de que sea lo más explicativo posible.
-- `git push origin *nombre de nuestra rama*`. Con este comando subiremos los cambios al repositorio online (en este caso Github).
+- `git push origin main`. Con este comando subiremos los cambios al repositorio online (en este caso Github).
 
 5. En este punto, nuestra rama tiene los cambios aplicados pero aún faltaría actualizar la rama principal. Para ello, nos tendremos que colocar en la rama principal y descargarnos los cambios. Una vez hecho esto, nos moveremos a nuestra rama y traeremos los cambios que nos hemos descargado. Luego, haremos lo mismo que hemos hecho en el punto **4**: _add_,_commit_ y _push_:
    - `git checkout main`. Nos movemos a la rama principal.
    - `git pull`. Descargamos todos los cambios que hay en la rama principal (si los hubiera).
    - `git checkout *nombre de nuestra rama*`. Nos movemos a nuestra rama.
    - `git merge main`. Traemos y combinamos los cambios que había en la rama principal con nuestra rama.
-   - `git add .`, `git commit -m *mensaje explicativo*`,`git push origin main`. Igual que en el paso 4, cambiando el nombre de nuestra rama por **main**.
+   - `git add .`, `git commit -m *mensaje explicativo*`,`git push origin main`. Igual que en el paso 4.
 6. Ya tenemos nuestra rama actualizada con nuestros cambios y los que había en la rama principal. El siguiente paso será crear un Pull Request en Github para poder incorporar nuestros cambios a la rama principal.
