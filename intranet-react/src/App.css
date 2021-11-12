@@ -1,0 +1,86 @@
+.cuerp {
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: vh;
+  background-color: #181a02;
+}
+.contain {
+  padding: 0%;
+  width: 100%;
+  height: vh;
+  background-color: aqua;
+}
+
+.loginvacioizda {
+
+  /* overflow: hidden; */
+  height: 100%;
+  width: 70%;
+  float: left;
+}
+
+.logincolum {
+  padding-left: 130px;
+  padding-top: 40rem;
+  height: 100%;
+  width: 30%;
+  background-color: #474543;
+  float: right;
+}
+
+
+.linea {
+width: 100%;
+height: 100vh;
+}
+
+.logoprincipal {
+	max-width: 100%;
+	height: auto;
+}
+
+.esquinasuperior {
+padding-left: 100px;
+padding-top: 100px;
+width: 40%;    
+}
+
+.bienvenidos {
+  padding-top: 150px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 15em;
+  color: #747372;
+  text-align: center;
+  vertical-align: center;
+}
+
+.tipohelveticafina {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: inherit;
+  font-size: 4rem;
+  color: white;
+  text-align: left;
+}
+
+.triangulo {
+    background-image: url("./assets/triangulologin.png");
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+}
+
+.recuadrostextos {
+  width: 90%;
+  height: 120px;
+  background-color: white;
+}
+.inputlogin {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: inherit;
+  font-size: 14rem;
+  color: white;
+  text-align: left;
+
+}
