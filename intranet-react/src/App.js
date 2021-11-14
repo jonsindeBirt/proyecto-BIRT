@@ -4,12 +4,13 @@ import React, { useState } from "react";
 import { Row } from "react-bootstrap";
 import "./App.css";
 import Login from "./login";
+import Directorio from "./directorio";
 
 function App() {
   const [value, onChange] = useState(new Date());
 
   return (
-    <Row className="linea">
+    <Row className="row">
       {/* Stack the columns on mobile by making one full-width and the other half-width */}
       <Login />
     </Row>

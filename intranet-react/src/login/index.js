@@ -12,7 +12,7 @@ function Login() {
         formularios el cual recarga el sitio
       */
     evt.preventDefault();
-    // Aquïż½ puedes usar values para enviar la informaciïż½n
+    // AquÃ¯Å¼Â½ puedes usar values para enviar la informaciÃ¯Å¼Â½n
   }
   function handleChange(evt) {
     /*
@@ -25,7 +25,7 @@ function Login() {
         Este snippet:
         1. Clona el estado actual
         2. Reemplaza solo el valor del
-           input que ejecutïż½ el evento
+           input que ejecutÃ¯Å¼Â½ el evento
       */
     const newValues = {
       ...values,
@@ -36,24 +36,25 @@ function Login() {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <div className="loginvacioizda">
-        <img className="esquinasuperior" src={logo} alt="logotipo"></img>
+
+      <div className="columnaizquierda">
+
+        <img className="logotiposuperior" src={logo} alt="logotipo"></img>
+        <p className="recuadromarronlogin">Login</p>
         <br />
 
         <p className="bienvenidos">Bienvenid@s</p>
         <br />
-      </div>
+        </div>
 
-      <div className="logincolum">
+        <div className="columnaderecha">
         <button type="submit" className="triangulo"></button>
         <br />
         <br />
         <br />
         <br />
 
-        <label className="tipohelveticafina" htmlFor="email">
-          Usuario
-        </label>
+        <label className="tituloscasillas" htmlFor="email">Usuario</label>
         <br />
 
         <input
@@ -64,13 +65,9 @@ function Login() {
           value={values.email}
           onChange={handleChange}
         />
-
         <br />
         <br />
-
-        <label className="tipohelveticafina" htmlFor="password">
-          Contraseña
-        </label>
+        <label className="tituloscasillas" htmlFor="password">Contraseña</label>
         <br />
 
         <input
@@ -80,11 +77,11 @@ function Login() {
           type="password"
           value={values.password}
           onChange={handleChange}
-        />
+          />
 
-        <br />
-        <br />
-        {/* <button type="submit">Entrar</button> */}
+         <br />
+         <br />
+         {/* <button type="submit">Entrar</button> */}
       </div>
     </form>
   );
