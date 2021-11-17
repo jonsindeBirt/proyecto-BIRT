@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Login from "./login";
 import { Routes, Route } from "react-router-dom";
@@ -6,12 +5,15 @@ import Directorio from "./directorio";
 import useAuth from "./hooks/useAuth";
 
 function App() {
+  // esto es un hook personalizado. lo usamos para verificar si el usuario esta logueado o no
   const { authState, setAuthState } = useAuth();
-  /**
-   * Usamos Routes para agrupar las rutas que tendrá nuestra aplicación. Cuando haya un cambio en la ruta del navegador, si coincide con alguna de las rutas, se ejecutará el componente correspondiente.
-   */
 
+  // comprobamos si el usuario esta logueado o no
   if (!authState) {
+    /**
+     * Usamos Routes para agrupar las rutas que tendrá nuestra aplicación.
+     * Cuando haya un cambio en la ruta del navegador, si coincide con alguna de las rutas, se ejecutará el componente correspondiente.
+     */
     return (
       <Routes>
         <Route path="/" element={<Login setAuthState={setAuthState} />} />
