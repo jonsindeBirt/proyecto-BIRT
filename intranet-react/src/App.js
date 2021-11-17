@@ -1,6 +1,7 @@
 import "./App.css";
 import Login from "./login";
 import { Routes, Route } from "react-router-dom";
+import Directorio from "./directorio";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
      */
     <Routes>
       <Route path="/login" element={<Login />} />
+      <Route path="/directorio" element={<Directorio />} />
     </Routes>
   );
 }

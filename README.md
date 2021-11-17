@@ -1,5 +1,7 @@
 # Trabajando con GIT
 
+Comienzo
+
 Esto es un pequeño resumen de GIT y los comandos que seguramente más utilizaremos durante el desarrollo de la aplicación. Este proyecto es un trabajo en equipo y fácilmente podemos encontrar conflictos en el código, pero con una pequeña organización y siguiente unas pautas sencillas limitaremos todos los posibles problemas.
 
 ## Primeros conceptos

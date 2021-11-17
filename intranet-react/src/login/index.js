@@ -50,7 +50,7 @@ function Login() {
         Este snippet:
         1. Clona el estado actual
         2. Reemplaza solo el valor del
-           input que ejecutïż½ el evento
+           input que ejecutÃ¯Å¼Â½ el evento
       */
     const newLoginState = {
       ...loginState,
@@ -60,24 +60,25 @@ function Login() {
     setLoginState(newLoginState);
   }
   return (
-    <Row className="linea">
+    <>
       <form onSubmit={handleSubmit}>
-        <div className="loginvacioizda">
-          <img className="esquinasuperior" src={logo} alt="logotipo"></img>
+        <div className="columnaizquierda">
+          <img className="logotiposuperior" src={logo} alt="logotipo"></img>
+          <p className="recuadromarronlogin">Login</p>
           <br />
 
           <p className="bienvenidos">Bienvenid@s</p>
           <br />
         </div>
 
-        <div className="logincolum">
+        <div className="columnaderecha">
           <button type="submit" className="triangulo"></button>
           <br />
           <br />
           <br />
           <br />
 
-          <label className="tipohelveticafina" htmlFor="email">
+          <label className="tituloscasillas" htmlFor="email">
             Usuario
           </label>
           <br />
@@ -90,11 +91,9 @@ function Login() {
             value={loginState.email}
             onChange={handleChange}
           />
-
           <br />
           <br />
-
-          <label className="tipohelveticafina" htmlFor="password">
+          <label className="tituloscasillas" htmlFor="password">
             Contraseña
           </label>
           <br />
@@ -118,7 +117,7 @@ function Login() {
           <p>{loginErrorMessage}</p>
         </div>
       ) : null}
-    </Row>
+    </>
   );
 }
 
