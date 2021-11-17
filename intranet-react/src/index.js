@@ -4,14 +4,23 @@ import "./index.css";
 import App from "./App";
 // import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+/**
+ * BrowserRouter es un componente que permite controlar la navegacion de la aplicación en React.
+ */
+/**
+ * QueryClient es un componente que permite realizar consultas a la base de datos.
+ */
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <QueryClientProvider client={new QueryClient()}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

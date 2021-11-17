@@ -1,11 +1,35 @@
 import { useState } from "react";
 import logo from "../assets/logocasino.png";
+import { useMutation, useQueryClient } from "react-query";
+import { login } from "./services";
+import { Row } from "react-bootstrap";
 
 function Login() {
-  const [values, setValues] = useState({
+  const [loginState, setLoginState] = useState({
     email: "",
     password: "",
   });
+
+  const [loginError, setLoginError] = useState(false);
+  const [loginErrorMessage, setLoginErrorMessage] = useState("");
+  const queryClient = useQueryClient();
+
+  const { mutate } = useMutation(login, {
+    onSuccess: ({ data }) => {
+      console.log(data);
+      setLoginError(false);
+      setLoginErrorMessage("");
+    },
+    onError: ({ error }) => {
+      console.log(error);
+      setLoginError(true);
+      setLoginErrorMessage(error.message);
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries("create");
+    },
+  });
+
   function handleSubmit(evt) {
     /*
         Previene el comportamiento default de los
@@ -13,6 +37,7 @@ function Login() {
       */
     evt.preventDefault();
     // Aquïż½ puedes usar values para enviar la informaciïż½n
+    mutate(loginState);
   }
   function handleChange(evt) {
     /*
@@ -27,66 +52,73 @@ function Login() {
         2. Reemplaza solo el valor del
            input que ejecutïż½ el evento
       */
-    const newValues = {
-      ...values,
+    const newLoginState = {
+      ...loginState,
       [name]: value,
     };
     // Sincroniza el estado de nuevo
-    setValues(newValues);
+    setLoginState(newLoginState);
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="loginvacioizda">
-        <img className="esquinasuperior" src={logo} alt="logotipo"></img>
-        <br />
+    <Row className="linea">
+      <form onSubmit={handleSubmit}>
+        <div className="loginvacioizda">
+          <img className="esquinasuperior" src={logo} alt="logotipo"></img>
+          <br />
 
-        <p className="bienvenidos">Bienvenid@s</p>
-        <br />
-      </div>
+          <p className="bienvenidos">Bienvenid@s</p>
+          <br />
+        </div>
 
-      <div className="logincolum">
-        <button type="submit" className="triangulo"></button>
-        <br />
-        <br />
-        <br />
-        <br />
+        <div className="logincolum">
+          <button type="submit" className="triangulo"></button>
+          <br />
+          <br />
+          <br />
+          <br />
 
-        <label className="tipohelveticafina" htmlFor="email">
-          Usuario
-        </label>
-        <br />
+          <label className="tipohelveticafina" htmlFor="email">
+            Usuario
+          </label>
+          <br />
 
-        <input
-          className="recuadrostextos"
-          id="email"
-          name="email"
-          type="email"
-          value={values.email}
-          onChange={handleChange}
-        />
+          <input
+            className="recuadrostextos"
+            id="email"
+            name="email"
+            type="email"
+            value={loginState.email}
+            onChange={handleChange}
+          />
 
-        <br />
-        <br />
+          <br />
+          <br />
 
-        <label className="tipohelveticafina" htmlFor="password">
-          Contraseña
-        </label>
-        <br />
+          <label className="tipohelveticafina" htmlFor="password">
+            Contraseña
+          </label>
+          <br />
 
-        <input
-          className="recuadrostextos"
-          id="password"
-          name="password"
-          type="password"
-          value={values.password}
-          onChange={handleChange}
-        />
+          <input
+            className="recuadrostextos"
+            id="password"
+            name="password"
+            type="password"
+            value={loginState.password}
+            onChange={handleChange}
+          />
 
-        <br />
-        <br />
-        {/* <button type="submit">Entrar</button> */}
-      </div>
-    </form>
+          <br />
+          <br />
+          {/* <button type="submit">Entrar</button> */}
+        </div>
+      </form>
+      {loginError ? (
+        <div className="error">
+          <p>{loginErrorMessage}</p>
+        </div>
+      ) : null}
+    </Row>
   );
 }
 
