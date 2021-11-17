@@ -2,9 +2,8 @@ import { useState } from "react";
 import logo from "../assets/logocasino.png";
 import { useMutation, useQueryClient } from "react-query";
 import { login } from "./services";
-import { Row } from "react-bootstrap";
 
-function Login() {
+function Login({ setAuthState }) {
   const [loginState, setLoginState] = useState({
     email: "",
     password: "",
@@ -19,6 +18,7 @@ function Login() {
       console.log(data);
       setLoginError(false);
       setLoginErrorMessage("");
+      setAuthState(true);
     },
     onError: ({ error }) => {
       console.log(error);
@@ -110,13 +110,13 @@ function Login() {
           <br />
           <br />
           {/* <button type="submit">Entrar</button> */}
+          {loginError ? (
+            <div>
+              <h1>{loginErrorMessage}</h1>
+            </div>
+          ) : null}
         </div>
       </form>
-      {loginError ? (
-        <div className="error">
-          <p>{loginErrorMessage}</p>
-        </div>
-      ) : null}
     </>
   );
 }
