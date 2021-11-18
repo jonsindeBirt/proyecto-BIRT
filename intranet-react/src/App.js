@@ -2,6 +2,7 @@ import "./App.css";
 import Login from "./login";
 import { Routes, Route } from "react-router-dom";
 import Directorio from "./directorio";
+import Calendario from "./calendario";
 import useAuth from "./hooks/useAuth";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
   } else {
     return (
       <Routes>
+        <Route path="/calendario" element={<Calendario />} />
         <Route path="/" element={<Directorio />} />
       </Routes>
     );
