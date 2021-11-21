@@ -1,3 +1,12 @@
+/* ESTILO BODY en Index.js público para poner fondo a la ventana */
+body {
+  background-image: url(./assets/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
 /* ESTILOS VENTANA login */
 .columnaizquierda {
   height: 100vh;
@@ -14,7 +23,7 @@
   float: right;
 }
 
-.row {
+.fila {
 width: 100vw;
 height: 100vh;
 }
@@ -75,7 +84,30 @@ width: 40%;
 
 /* ESTILOS VENTANA directorio */
 .imagenfondodirectorio {
-  background-size: 100vw;
-  background-size: 100vh;
+  /* Ubicación de la imagen */
+  background-image: url(
+    
+  ); 
 
+
+/* Para dejar la imagen de fondo centrada, vertical y
+horizontalmente */
+background-position: center center;
+
+/* Para que la imagen de fondo no se repita */
+background-repeat: no-repeat;
+
+/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido 
+background-attachment: fixed;
+
+
+/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador 
+background-size: cover;
+
+}
+
+
+.botones {
+  background-color: darkorchid;
+  */
 }
