@@ -85,9 +85,9 @@ width: 40%;
 /* ESTILOS VENTANA directorio */
 .imagenfondodirectorio {
   /* Ubicación de la imagen */
-  background-image: url(
+  background-image: url(./assets/fondo.jpg);
     
-  ); 
+
 
 
 /* Para dejar la imagen de fondo centrada, vertical y
