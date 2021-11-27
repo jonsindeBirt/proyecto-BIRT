@@ -1,7 +1,9 @@
 import { useState } from "react";
 import logo from "../assets/logocasino.png";
+import "./index.css";
 import { useMutation, useQueryClient } from "react-query";
 import { login } from "./services";
+import { Container, Row, Col } from "react-bootstrap";
 
 function Login({ setAuthState }) {
   const [loginState, setLoginState] = useState({
@@ -15,13 +17,11 @@ function Login({ setAuthState }) {
 
   const { mutate } = useMutation(login, {
     onSuccess: ({ data }) => {
-      console.log(data);
       setLoginError(false);
       setLoginErrorMessage("");
       setAuthState(true);
     },
     onError: ({ error }) => {
-      console.log(error);
       setLoginError(true);
       setLoginErrorMessage(error.message);
     },
@@ -60,64 +60,72 @@ function Login({ setAuthState }) {
     setLoginState(newLoginState);
   }
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <div className="columnaizquierda">
-          <img className="logotiposuperior" src={logo} alt="logotipo"></img>
-          <p className="recuadromarronlogin">Login</p>
-          <br />
+    <Container fluid>
+      <Row>
+        <Col lg={10} className="columna-izquierda">
+          <Row className="align-items-end h-35">
+            <Col>
+              <img
+                className="logotipo-superior"
+                src={logo}
+                alt="logotipo"
+              ></img>
+            </Col>
+            <Col className="d-flex justify-content-end r-padding-0">
+              <p className="recuadro-marron-login">Login</p>
+            </Col>
+          </Row>
+          <Row className="align-items-center h-65">
+            <p className="bienvenidos">Bienvenid@s</p>
+          </Row>
+        </Col>
+        <Col lg={2} className="columna-derecha">
+          <form onSubmit={handleSubmit}>
+            <Row className="align-items-end h-35">
+              <Col lg="12">
+                <button type="submit" className="triangulo"></button>
+              </Col>
+            </Row>
 
-          <p className="bienvenidos">Bienvenid@s</p>
-          <br />
-        </div>
-
-        <div className="columnaderecha">
-          <button type="submit" className="triangulo"></button>
-          <br />
-          <br />
-          <br />
-          <br />
-
-          <label className="tituloscasillas" htmlFor="email">
-            Usuario
-          </label>
-          <br />
-
-          <input
-            className="recuadrostextos"
-            id="email"
-            name="email"
-            type="email"
-            value={loginState.email}
-            onChange={handleChange}
-          />
-          <br />
-          <br />
-          <label className="tituloscasillas" htmlFor="password">
-            Contraseña
-          </label>
-          <br />
-
-          <input
-            className="recuadrostextos"
-            id="password"
-            name="password"
-            type="password"
-            value={loginState.password}
-            onChange={handleChange}
-          />
-
-          <br />
-          <br />
-          {/* <button type="submit">Entrar</button> */}
-          {loginError ? (
-            <div>
-              <h1>{loginErrorMessage}</h1>
-            </div>
-          ) : null}
-        </div>
-      </form>
-    </>
+            <Row>
+              <Col xs={12}>
+                <label htmlFor="email">Usuario</label>
+              </Col>
+              <Col xs={12}>
+                <input
+                  className="recuadros-textos"
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={loginState.email}
+                  onChange={handleChange}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12}>
+                <label htmlFor="password">Contraseña</label>
+              </Col>
+              <Col xs={12}>
+                <input
+                  className="recuadros-textos"
+                  id="password"
+                  name="password"
+                  type="password"
+                  value={loginState.password}
+                  onChange={handleChange}
+                />
+              </Col>
+            </Row>
+            {loginError ? (
+              <div>
+                <p className="login-error-msg">{loginErrorMessage}</p>
+              </div>
+            ) : null}
+          </form>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
