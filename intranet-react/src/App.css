@@ -111,3 +111,9 @@ background-size: cover;
   background-color: darkorchid;
   */
 }
+
+
+.btn-flat {
+    background-color: purple;
+    color: white;
+  }

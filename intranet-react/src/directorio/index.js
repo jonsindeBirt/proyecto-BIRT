@@ -1,8 +1,9 @@
-import fondodirectorio from "../assets/fondo.jpg";
+// import fondodirectorio from "../assets/fondo.jpg";
 //importamos el compoente Link desde react-router-dom
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import React from "react";
 import Desple from "../components/desplegable";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function Directorio() {

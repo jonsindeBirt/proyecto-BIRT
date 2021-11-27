@@ -1,31 +1,25 @@
-import React from 'react';
-import { DropdownButton, ButtonGroup, Dropdown, Button } from 'react-bootstrap';
+import React from 'react-bootstrap';
+import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu } from 'reactstrap';
+import { useState } from "react";
 
 function Desple() {
+
+const [dropdown, setDropdown]=useState(false);
+const abrirCerrarDropDown=()=>{
+  setDropdown(!dropdown);
+
+}
     return (
-  <div className="col-4">
-   <ButtonGroup vertical>
-  <Button>Button</Button>
-  <Button>Button</Button>
+  <div>
+    <Dropdown isOpen={dropdown} toggle={abrirCerrarDropDown}>
+      <DropdownToggle> Departamento informática</DropdownToggle>
+        <DropdownMenu>
+            <DropdownItem>Ayuda</DropdownItem>
+            <DropdownItem>Técnicos</DropdownItem>
+            <DropdownItem>Preguntas más frecuentes</DropdownItem>
+        </DropdownMenu>
+    </Dropdown>
 
-  <DropdownButton as={ButtonGroup} title="Dropdown" id="bg-vertical-dropdown-1">
-    <Dropdown.Item eventKey="1">Dropdown link</Dropdown.Item>
-    <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
-  </DropdownButton>
-
-  <Button>Button</Button>
-  <Button>Button</Button>
-
-  <DropdownButton as={ButtonGroup} title="Dropdown" id="bg-vertical-dropdown-2">
-    <Dropdown.Item eventKey="1">Dropdown link</Dropdown.Item>
-    <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
-  </DropdownButton>
-
-  <DropdownButton as={ButtonGroup} title="Dropdown" id="bg-vertical-dropdown-3">
-    <Dropdown.Item eventKey="1">Dropdown link</Dropdown.Item>
-    <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
-  </DropdownButton>
-</ButtonGroup>
   </div>   
 
     );
