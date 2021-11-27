@@ -104,7 +104,7 @@ function Login({ setAuthState }) {
             </Row>
             <Row>
               <Col xs={12}>
-                <label htmlFor="password">ContraseÃ±a</label>
+                <label htmlFor="password">Contraseña</label>
               </Col>
               <Col xs={12}>
                 <input

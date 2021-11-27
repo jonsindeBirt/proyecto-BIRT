@@ -1,18 +1,18 @@
 
 /* ESTILOS VENTANA directorio */
-.imagenfondodirectorio {
+/* .imagenfondodirectorio { */
   /* Ubicación de la imagen */
-  background-image: url(./assets/fondo.jpg);
+  /* background-image: url(./assets/fondo.jpg); */
     
 
 
 
 /* Para dejar la imagen de fondo centrada, vertical y
 horizontalmente */
-background-position: center center;
+/* background-position: center center; */
 
 /* Para que la imagen de fondo no se repita */
-background-repeat: no-repeat;
+/* background-repeat: no-repeat; */
 
 /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido 
 background-attachment: fixed;
@@ -27,7 +27,7 @@ background-size: cover;
 .botones {
   background-color: darkorchid;
   */
-}
+/* } */
 
 
 .btn-flat {

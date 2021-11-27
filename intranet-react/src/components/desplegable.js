@@ -2,6 +2,7 @@ import React from 'react-bootstrap';
 import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu } from 'reactstrap';
 import { useState } from "react";
 
+
 function Desple() {
 
 const [dropdown, setDropdown]=useState(false);
@@ -10,7 +11,7 @@ const abrirCerrarDropDown=()=>{
 
 }
     return (
-  <div class>
+  <div>
     <Dropdown isOpen={dropdown} toggle={abrirCerrarDropDown}>
       <DropdownToggle> Departamento informática</DropdownToggle>
         <DropdownMenu>
