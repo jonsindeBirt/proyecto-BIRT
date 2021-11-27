@@ -10,7 +10,7 @@ const abrirCerrarDropDown=()=>{
 
 }
     return (
-  <div>
+  <div class>
     <Dropdown isOpen={dropdown} toggle={abrirCerrarDropDown}>
       <DropdownToggle> Departamento informática</DropdownToggle>
         <DropdownMenu>
