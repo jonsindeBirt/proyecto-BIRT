@@ -10089,6 +10089,11 @@
     "schema-utils" "^3.0.0"
     "semver" "^7.3.2"
 
+"sassy-datepicker@^0.6.0":
+  "integrity" "sha512-8mjMcPrypdXSYMq/PhUjV6rj4D4GRin+9X8qW66qrnZo5SEIe5fIyj418F3oI34TSeCOmimMtO735NgFsng5Ug=="
+  "resolved" "https://registry.npmjs.org/sassy-datepicker/-/sassy-datepicker-0.6.0.tgz"
+  "version" "0.6.0"
+
 "sax@~1.2.4":
   "integrity" "sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw=="
   "resolved" "https://registry.npmjs.org/sax/-/sax-1.2.4.tgz"

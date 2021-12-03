@@ -1,8 +1,12 @@
+import DatePicker from 'sassy-datepicker';
+
 function Calendario() {
+  const onChange = (date) => {
+    console.log(date.toString());
+  };
+
   return (
-    <div>
-      <h1>Calendario</h1>
-    </div>
+    <DatePicker onChange={onChange} />
   );
 }
 
