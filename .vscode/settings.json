@@ -1,4 +1,5 @@
 {
     "print.colourScheme": "Atelier Dune",
-    "files.autoGuessEncoding": true
+    "files.autoGuessEncoding": true,
+    "git.ignoreLimitWarning": true
 }

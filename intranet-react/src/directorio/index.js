@@ -9,6 +9,7 @@ import DesplegableIT from "../components/desplegableIT";
 import DesplegableRRHH from "../components/desplegableRRHH";
 import Calendario from "../calendario";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import MostrarTablon from "../components/mostrarTablon"; 
 // import { Dimensions } from "react-native";
 
 // var width = Dimensions.get('window').width; //full width
@@ -18,31 +19,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Directorio() {
   return (
-    <Container fluid className="fondo-imagen h-100 w-100" xs={12}>
+    <Container fluid className="fondo-imagen" xs={12}>
       <Row>
         <Col md lg={9} xs={12} className="columna-izquierda"  >
-               <Row className="logotipo-superior" xs={12}>
+               <Row className="logotipo-superior">
                  <img
                     src={logo}
                     alt="logotipo">
                   </img>
                 </Row>  
 
-                <Row className="tablon" xs={12}>
-                   <p> <h1>TABLON DE ANUNCIOS</h1></p>
+                <Row className="tablon">
+                  <Col md lg={9} xs={12}><MostrarTablon/></Col>
+                  
                 </Row>
 
-                <Row className="align-items-center h-30 "xs={12}>
+                <Row className="align-items-center h-25" xs={12}>
                     <p> <h1>El tiempo, calendario, etc</h1></p>
                 </Row>
         </Col>
 
 
-        <Col md lg={3} xs={12} >
-            <Row class="desplegable">
+        <Col className="columna-derecha-directorio" md lg={3} xs={12
+        } >
+            <Row className="desplegable">
                 <DesplegableIT/>
                 <DesplegableRRHH/>
-
             </Row>
             <Row className="calendario" xs={12} md lg={3}  >
                     <Calendario/>

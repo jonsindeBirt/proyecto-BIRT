@@ -27,7 +27,9 @@
 .logotipo-superior {
 padding-left: 20px;
 padding-top: 20px;
-background-size: cover;
+height: auto; 
+width: auto; 
+min-width: 400px; 
 
 }
 /* 
@@ -38,12 +40,21 @@ background-color: grey;
 
 }
  */
+.columna-derecha-directorio {
+  width: 100vw;
+  height: 100vh;
+  background-color: blueviolet;
+  align-self: flex-end;
+  align-items: center;
+  align-content: space-around;
+  padding: 0px;
 
+}
 
 .tablon {
 padding-top: 30px;
 width: 100vw;
-height: 40vh;
+height: 45vh;
 vertical-align:middle;
 }
 
@@ -55,8 +66,7 @@ vertical-align:middle;
   }
 
 .calendario {
-position: relative;
-height: 40vh;
+  height: auto;
 }
 
 .h20{
@@ -81,50 +91,13 @@ height: 40vh;
 }
 
 .w-100{
-  min-width: 100vw;
+  width: 100vw;
 }
 
 .r-padding-0{
   padding-right: 0 !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.fondo-imagen {
-    background-image: url(../assets/fondo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    flex-grow: initial;
-
-  }
-
-  .directorio-desplegable {
-    width: 100vw;
-    height: 100vh;
-    background-color: blueviolet;
-    align-self: flex-end;
-    align-items: center;
-    padding: 0px;
-  }
 
   
 

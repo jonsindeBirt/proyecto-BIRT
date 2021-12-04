@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import Directorio from "./directorio";
 import Calendario from "./calendario";
 import useAuth from "./hooks/useAuth";
+import FormularioTablon from "./formularioTablon";
+
 
 function App() {
   // esto es un hook personalizado. lo usamos para verificar si el usuario esta logueado o no
@@ -25,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/calendario" element={<Calendario />} />
         <Route path="/" element={<Directorio />} />
+        <Route path="/" element={<FormularioTablon />} />
       </Routes>
     );
   }
