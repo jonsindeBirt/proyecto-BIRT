@@ -8,10 +8,10 @@ function FormularioTablon (){
 
 return (
     <>
-    <FloatingLabel controlId="floatingTextarea" label="Comments" className="w-100">
+    <FloatingLabel controlId="floatingTextarea" label="Anuncios" className="w-100">
       <Form.Control as="textarea" placeholder="Escribe tu anuncio aquí" />
     </FloatingLabel>
-    <FloatingLabel controlId="floatingTextarea2" label="Comments">
+    <FloatingLabel controlId="floatingTextarea2" label="Anuncios">
       <Form.Control
         as="textarea"
         placeholder="Escribe tu anuncio aquí"

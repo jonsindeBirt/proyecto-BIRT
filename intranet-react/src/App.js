@@ -1,10 +1,10 @@
 import "./App.css";
 import Login from "./login";
-import { Routes, Route } from "react-router-dom";
-import Directorio from "./directorio";
-import Calendario from "./calendario";
+import { Routes, Route, Link } from "react-router-dom";
+import Directorio from "./components/ventanaDirectorio";
+import Calendario from "./components/calendarioDirectorio";
 import useAuth from "./hooks/useAuth";
-import FormularioTablon from "./formularioAnuncios";
+import FormularioTablon from "./components/ventanaAltaAnuncios";
 
 
 function App() {
@@ -28,6 +28,8 @@ function App() {
         <Route path="/calendario" element={<Calendario />} />
         <Route path="/" element={<Directorio />} />
         <Route path="/" element={<FormularioTablon />} />
+        <Route path="/empleados" element={<FormularioTablon />} />
+        <Route path="/tiempo" element={<FormularioTablon />} />
       </Routes>
     );
   }

@@ -6,6 +6,8 @@ import {
   DropdownMenu,
 } from "reactstrap";
 import { useState } from "react";
+import {Link} from "react-router-dom";
+import "./index.css";
 
 function DesplegableRRHH() {
   const [dropdown, setDropdown] = useState(false);
@@ -30,7 +32,9 @@ function DesplegableRRHH() {
    * el resultado final es un array con las etiquetas <DropdownItem> con los elementos que queremos mostrar
    */
   const itemsDropdownReact = departamentoRRHH.map(function (item, index) {
-    return <DropdownItem key={index}>{item}</DropdownItem>;  
+    return <DropdownItem key={index}><Link className="links" to="empleados">{item}</Link>
+    </DropdownItem>;
+      
   });
 
 
