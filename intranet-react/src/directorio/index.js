@@ -3,13 +3,15 @@
 // import { useState } from "react";
 import logo from "../assets/logocasino.png";
 import "./index.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, ThemeProvider } from "react-bootstrap";
 import React from "react";
 import DesplegableIT from "../components/desplegableIT";
 import DesplegableRRHH from "../components/desplegableRRHH";
 import Calendario from "../calendario";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MostrarTablon from "../components/mostrarTablon"; 
+import Button from "@restart/ui/esm/Button";
+
 // import { Dimensions } from "react-native";
 
 // var width = Dimensions.get('window').width; //full width
@@ -19,7 +21,7 @@ import MostrarTablon from "../components/mostrarTablon";
 
 function Directorio() {
   return (
-    <Container fluid className="fondo-imagen" xs={12}>
+    <Container fluid className="fondo-imagen">
       <Row>
         <Col md lg={9} xs={12} className="columna-izquierda"  >
                <Row className="logotipo-superior">
@@ -30,11 +32,11 @@ function Directorio() {
                 </Row>  
 
                 <Row className="tablon">
-                  <Col md lg={9} xs={12}><MostrarTablon/></Col>
+                  <Col md lg={8} xs={12}><MostrarTablon/></Col>
                   
                 </Row>
 
-                <Row className="align-items-center h-25" xs={12}>
+                <Row >
                     <p> <h1>El tiempo, calendario, etc</h1></p>
                 </Row>
         </Col>
@@ -42,13 +44,18 @@ function Directorio() {
 
         <Col className="columna-derecha-directorio" md lg={3} xs={12
         } >
-            <Row className="desplegable">
-                <DesplegableIT/>
-                <DesplegableRRHH/>
-            </Row>
-            <Row className="calendario" xs={12} md lg={3}  >
-                    <Calendario/>
-            </Row> 
+               <Row>
+               <Button className="boton-listin d-md-table-row" ></Button>
+
+                </Row>
+
+               <Row className="desplegable" >
+                  <DesplegableIT/>
+                  <DesplegableRRHH/>
+               </Row> 
+               <Row className="calendario">  
+                  <Calendario/>
+                </Row>
         </Col>
 
       </Row>

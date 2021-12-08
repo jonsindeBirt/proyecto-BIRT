@@ -35,13 +35,11 @@ function DesplegableIT() {
 
 
   return (
-    <div>
-      <Dropdown isOpen={dropdown} toggle={abrirCerrarDropDown}>
+      <Dropdown style={{ width: "100-vw", textAlign: "justify", textDecorationStyle: "solid", padding: "20px",   borderRadius: "50px", borderBlockColor: "black" }} isOpen={dropdown} toggle={abrirCerrarDropDown}>
         <DropdownToggle> IT</DropdownToggle>
         {/* dentro del <DropDownMenu> indicamos que queremos pintar el array de elementos JSX que hemos creado anteriormente */}
         <DropdownMenu>{itemsDropdownReact}</DropdownMenu>
       </Dropdown>
-    </div>
   );
 }
 export default DesplegableIT;

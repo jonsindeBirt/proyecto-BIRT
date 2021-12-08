@@ -2,34 +2,50 @@
 /* ESTILOS VENTANA directorio */
 .columna-izquierda {
   height: 100vh;
+  width: 100vw;
 }
 
-.fondo-imagen {
-  background-image: url("../assets/fondo.jpg");
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  max-width: 100vw;
-  max-height: 100vh;
-  padding: 0;
-  
-}
+  .fondo-imagen {
+    background-image: url("../assets/fondo.jpg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    justify-content: space-between;
+    flex-direction:column;
 
-.container-logo-tablero {
-  align-items: center;
-  min-width: 100vh;
-  min-width: 100vw;
+  }
 
-}
+  .boton-listin{
+    background-image: url("../assets/telefonopeq.png");
+    padding-right: 20px;
+    padding-top: 20px;
+    margin-bottom: 3%;
+    background-repeat: no-repeat;
+
+    
+  }
+
+/*   
+@media  {
+  .fondo-imagen {
+    background-color: #B5A89B;
+    background-image: none;
+  }
+} */
+
 
 
 .logotipo-superior {
-padding-left: 20px;
+padding-right: 20px;
 padding-top: 20px;
+margin-bottom: 3%;
 height: auto; 
-width: auto; 
-min-width: 400px; 
+min-width: 250px; 
 
 }
 /* 
@@ -41,32 +57,30 @@ background-color: grey;
 }
  */
 .columna-derecha-directorio {
-  width: 100vw;
   height: 100vh;
-  background-color: blueviolet;
-  align-self: flex-end;
-  align-items: center;
-  align-content: space-around;
-  padding: 0px;
+  background-color: #B5A89B;
+  padding: 20%;
 
 }
 
 .tablon {
 padding-top: 30px;
 width: 100vw;
-height: 45vh;
+height: 100vh;
+margin: 20%;
+float: left;
 vertical-align:middle;
 }
 
 .desplegable{
-  align-content: top;  
-  margin-bottom: 20px;
+  vertical-align: top;
   width: 100vw;
   height: 60vh;
   }
 
 .calendario {
-  height: auto;
+  height: 40vh;
+  
 }
 
 .h20{

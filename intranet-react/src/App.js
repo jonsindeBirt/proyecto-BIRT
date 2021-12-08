@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Directorio from "./directorio";
 import Calendario from "./calendario";
 import useAuth from "./hooks/useAuth";
-import FormularioTablon from "./formularioTablon";
+import FormularioTablon from "./formularioAnuncios";
 
 
 function App() {

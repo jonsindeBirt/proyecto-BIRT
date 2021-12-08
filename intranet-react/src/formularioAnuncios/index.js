@@ -8,7 +8,7 @@ function FormularioTablon (){
 
 return (
     <>
-    <FloatingLabel controlId="floatingTextarea" label="Comments" className="mb-3">
+    <FloatingLabel controlId="floatingTextarea" label="Comments" className="w-100">
       <Form.Control as="textarea" placeholder="Escribe tu anuncio aquí" />
     </FloatingLabel>
     <FloatingLabel controlId="floatingTextarea2" label="Comments">
