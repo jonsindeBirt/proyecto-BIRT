@@ -2,7 +2,7 @@
 /* ESTILOS VENTANA directorio */
 .columna-izquierda {
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .fondo-imagen {
@@ -16,17 +16,15 @@
     position: relative;
 
   }
+  .rowBotonListin {
+    vertical-align: top;
+    align-items: flex-end;
+    height: 25vh;
 
-  .boton-listin{
-    margin-bottom: 3%;
-    background-repeat: no-repeat;
-    background-color: transparent;
+
   }
 
-  .ajuste-boton {
-    width: 100%;
-    height: 100%;
-  }
+
 
 /*   
 @media  {
@@ -39,9 +37,8 @@
 
 
 .logotipo-superior {
-padding-right: 20px;
+padding-left: 20px;
 padding-top: 20px;
-margin-bottom: 3%;
 height: auto; 
 min-width: 250px; 
 
@@ -55,28 +52,59 @@ background-color: grey;
 }
  */
 .columna-derecha-directorio {
-  height: 100vh;
+  height: auto;
   background-color: #B5A89B;
   padding: 20%;
+  vertical-align: top;
+  margin-left: 20px;
+
+}
+
+.rowBotonListin{
+  width: 100vw;
+  height: 25vh;
+  vertical-align: top;
+
 
 }
 
 .tablon {
 padding-top: 30px;
 width: 100vw;
-height: 100vh;
+/* height: 55vh; */
 vertical-align:middle;
+}
+
+.boton-listin{
+  margin-bottom: 3%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border-style: none;
+  /* height: 15vh; */
+}
+
+.ajuste-boton {
+  width: 100%;
+  height: 100%;
 }
 
 .desplegable{
   vertical-align: top;
   width: 100vw;
-  height: 60vh;
   }
 
-.calendario {
-  height: 40vh;
-  
+  .lineaInferior{
+    align-items: center;
+  }
+
+.columnaCentrada{
+  align-content: center;
+  align-items: center;
+
+  }
+
+.h10{
+  height: 10vh;
 }
 
 .h20{
@@ -89,6 +117,9 @@ vertical-align:middle;
 
 .h-65{
   height: 65vh;
+}
+.h-75{
+  height: 75vh;
 }
 .h35{
   height: 35vh;
@@ -105,7 +136,9 @@ vertical-align:middle;
 }
 
 
-.w-25{
+.w-10{
+  width: 10vw;
+}.w-25{
   width: 25vw;
 }
 .r-padding-0{

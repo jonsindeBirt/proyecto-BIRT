@@ -8,7 +8,7 @@ import { Card } from "react-bootstrap";
 function Tablon() {
 
   return (
-<Card  xs={12} style={{ width: "100-vw", textAlign: "justify", textDecorationStyle: "solid", padding: "20px",   borderRadius: "50px", borderBlockColor: "black" }}>
+<Card  style={{ textAlign: "justify", textDecorationStyle: "solid", padding: "20px",   borderRadius: "50px", borderBlockColor: "black" }}>
   <Card.Body>
     <Card.Title className="card-header, text-align-left"><h1>Tablón de anuncios</h1></Card.Title>
     <Card.Subtitle className="card-title"><h1>Anuncio 1</h1></Card.Subtitle>
