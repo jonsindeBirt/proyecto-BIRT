@@ -1,11 +1,11 @@
 import "./App.css";
 import Login from "./login";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Directorio from "./components/ventanaDirectorio";
 import Calendario from "./components/calendarioDirectorio";
 import useAuth from "./hooks/useAuth";
 import FormularioTablon from "./components/ventanaAltaAnuncios";
-
+import React from 'react';
 
 function App() {
   // esto es un hook personalizado. lo usamos para verificar si el usuario esta logueado o no
@@ -25,11 +25,10 @@ function App() {
   } else {
     return (
       <Routes>
-        <Route path="/calendario" element={<Calendario />} />
         <Route path="/" element={<Directorio />} />
+        <Route path="/" element={<Calendario />} />
         <Route path="/" element={<FormularioTablon />} />
         <Route path="/empleados" element={<FormularioTablon />} />
-        <Route path="/tiempo" element={<FormularioTablon />} />
       </Routes>
     );
   }

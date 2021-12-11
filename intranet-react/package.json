@@ -45,5 +45,8 @@
   },
   "optionalDependencies": {
     "utf-8-validate": "^5.0.7"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.16.0"
   }
 }

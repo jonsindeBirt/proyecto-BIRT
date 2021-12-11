@@ -1,27 +1,20 @@
 	//importamos el compoente Link desde react-router-dom
 	// import { Link } from "react-router-dom";
 	// import { useState } from "react";
-	import logo from "../assets/logocasino.png";
-	import botonListin  from "../assets/telefonopeq.png";
+	import logo from "../../assets/logocasino.png";
+	import iconoListin from "../../assets/telefonopeq.png";
 	import "./index.css";
-	import { Container, Row, Col, ThemeProvider, Figure, Image } from "react-bootstrap";
+	import { Container, Row, Col, Image } from "react-bootstrap";
 	import React from "react";
-	import DesplegableIT from "../desplegableIT/desplegableIT";
-	import DesplegableRRHH from "../desplegableRRHH/desplegableRRHH";
+	import DesplegableIT from "../desplegableIT";
+	import DesplegableRRHH from "../desplegableRecursos";
 	import Calendario from "../calendarioDirectorio";
 	import 'bootstrap/dist/css/bootstrap.min.css';
-	import MostrarTablon from "../mostrarTablon/mostrarTablon"; 
+	import Tablon from "../tablonDirectorio"; 
 	import Button from "@restart/ui/esm/Button";
-	import MysteryJackpot from "../figureZeJackpot";
-	import ZeJackpot from "../figureZeJackpot";
+	import MysteryJackpot from "../figureMysteryJackpot";
+	import ZeJackpot from "../figureZejackpot";
 	import ElTiempo from "../figureElTiempo";
-
-	
-	// import { Dimensions } from "react-native";
-	
-	// var width = Dimensions.get('window').width; //full width
-	// var height = Dimensions.get('window').height; //full height
-	
 	
 	
 	function Directorio() {
@@ -39,7 +32,7 @@
 							
 							<Row className="tablon">
 								<Col >
-									 <MostrarTablon/> 
+									 <Tablon/> 
 								</Col>
 							
 							</Row>
@@ -50,7 +43,7 @@
 						} >
 								<Row>
 									<Button className="boton-listin w-25" >
-									<Image className="ajuste-boton" src={botonListin} fluid />
+									<Image className="ajuste-boton" src={iconoListin} fluid />
 									
 									</Button>
 								</Row>
@@ -78,6 +71,7 @@
 							</Row>
 						</Col>
 					</Row>
+					
 			 	 </Row>	
 			
 			</Container>

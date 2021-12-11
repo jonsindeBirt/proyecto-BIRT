@@ -1,11 +1,11 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card, Row } from "react-bootstrap";
-import { CardColumns, CardHeader } from "reactstrap";
+import { Card } from "react-bootstrap";
 
 
 
-function MostrarTablon() {
+
+function Tablon() {
 
   return (
 <Card  xs={12} style={{ width: "100-vw", textAlign: "justify", textDecorationStyle: "solid", padding: "20px",   borderRadius: "50px", borderBlockColor: "black" }}>
@@ -21,4 +21,4 @@ function MostrarTablon() {
 </Card>
  );
 }
-export default MostrarTablon;
+export default Tablon;
