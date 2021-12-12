@@ -1,9 +1,5 @@
 
 /* ESTILOS VENTANA directorio */
-.columna-izquierda {
-  height: 100vh;
-  /* width: 100vw; */
-}
 
 .fondo-imagen {
     background-image: url("../../assets/fondo.png");
@@ -16,76 +12,65 @@
     position: relative;
 
   }
-  .rowBotonListin {
-    vertical-align: top;
-    align-items: flex-end;
-    height: 25vh;
-
-
-  }
-
-
-
-/*   
-@media  {
-  .fondo-imagen {
-    background-color: #B5A89B;
-    background-image: none;
-  }
-} */
-
-
-
-.logotipo-superior {
-padding-left: 20px;
-padding-top: 20px;
-height: auto; 
-min-width: 250px; 
-
-}
-/* 
-.estilos-desplegable{
-font-size: 2em;
-font-weight: lighter;
-background-color: grey;
-
-}
- */
-.columna-derecha-directorio {
-  height: auto;
-  background-color: #B5A89B;
-  padding: 20%;
-  vertical-align: top;
-  margin-left: 20px;
-
-}
 
 .rowBotonListin{
-  width: 100vw;
-  height: 25vh;
+  height: 15vh;
   vertical-align: top;
-
-
 }
 
-.tablon {
-padding-top: 30px;
-width: 100vw;
-/* height: 55vh; */
-vertical-align:middle;
+/* .primera-linea {
+  padding-top: 40px;
+  padding-left: 40px;
+  vertical-align: top;
+  } */
+  
+ 
+.columna-tablon {
+  vertical-align: bottom;
+  margin-right: 50px;
+  margin-left: 50px;
+  } 
+   
+.linea-contenedor{
+height: 100vh;
+padding-top: 40px;
 }
+
+
+.linea-uno {
+  height: auto;
+}
+
+
+
+.linea-dos {
+  align-items: center;
+  height: 15vh;
+
+} 
+
+
+.columna-logotipo {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: 1em;
+}
+  .columna-derecha {
+    vertical-align: top;
+    background-color: transparent;
+
+  }
+    
 
 .boton-listin{
-  margin-bottom: 3%;
   background-repeat: no-repeat;
   background-color: transparent;
   border-style: none;
-  /* height: 15vh; */
 }
 
 .ajuste-boton {
-  width: 100%;
-  height: 100%;
+  width: 20%;
+  height: 20%;
 }
 
 .desplegable{
@@ -93,21 +78,11 @@ vertical-align:middle;
   width: 100vw;
   }
 
-  .lineaInferior{
-    align-items: center;
+  .h-10{
+    height: 10vh;
   }
 
-.columnaCentrada{
-  align-content: center;
-  align-items: center;
-
-  }
-
-.h10{
-  height: 10vh;
-}
-
-.h20{
+.h-20{
   height: 20vh;
 }
 

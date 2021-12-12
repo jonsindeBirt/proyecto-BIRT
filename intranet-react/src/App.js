@@ -5,6 +5,7 @@ import Directorio from "./components/ventanaDirectorio";
 import Calendario from "./components/calendarioDirectorio";
 import useAuth from "./hooks/useAuth";
 import FormularioTablon from "./components/ventanaAltaAnuncios";
+import ListadoEmpleados from "./components/ventanaListadoEmpleados";
 import React from 'react';
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
         <Route path="/" element={<Directorio />} />
         <Route path="/" element={<Calendario />} />
         <Route path="/" element={<FormularioTablon />} />
-        <Route path="/empleados" element={<FormularioTablon />} />
+        <Route path="/empleados" element={<ListadoEmpleados />} />
       </Routes>
     );
   }

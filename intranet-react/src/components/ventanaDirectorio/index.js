@@ -1,7 +1,7 @@
 	//importamos el compoente Link desde react-router-dom
 	// import { Link } from "react-router-dom";
 	// import { useState } from "react";
-	import logo from "../../assets/logocasino.png";
+	import logo from "../../assets/logocasinopeq.png";
 	import iconoListin from "../../assets/telefonopeq.png";
 	import "./index.css";
 	import { Container, Row, Col, Image } from "react-bootstrap";
@@ -20,29 +20,24 @@
 	function Directorio() {
 		return (
 			<Container fluid className="fondo-imagen">
-				<Row className="h-100">
-					<Row className="h-65">
-						<Col xs={12} md lg={9}  className="columna-izquierda"  >
-							<Row className="logotipo-superior">
-								<img
-									src={logo}
-									alt="logotipo">
-								</img>
-							</Row>  
-							
-							<Row className="tablon">
-								<Col  xs={12} md lg={9}>
-									 <Tablon/> 
-								</Col>
-							
-							</Row>
-						</Col>
-			
-			
-						<Col className="columna-derecha-directorio" md lg={3} xs={12
-						} >
-								<Row className="rowBotonListin">
-									<Button className="boton-listin w-25" >
+				<Row className="linea-contenedor">
+					<Row >
+					
+					<Col className="linea-uno" md lg="auto" >
+						<img
+							src={logo}
+							alt="logotipo"
+							className="columna-logotipo" >
+						</img>
+					</Col>
+
+					<Col className="columna-tablon">
+						 <Tablon lg md="8" className="tablon"/> 
+					</Col>
+
+					<Col md="3" className="columna-derecha"  >
+								<Row >
+									<Button className="boton-listin" >
 									<Image className="ajuste-boton" src={iconoListin} fluid />
 									</Button>
 								</Row>
@@ -52,9 +47,8 @@
 									<DesplegableRRHH/>
 								</Row> 
 						</Col>
-			
 					</Row>
-					<Row className="lineaInferior">
+					<Row className="linea-dos">
 						<Col className="columnaCentrada">               
 							<MysteryJackpot/>
 						</Col>
