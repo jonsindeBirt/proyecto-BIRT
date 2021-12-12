@@ -1,7 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Figure } from "react-bootstrap";
-import botonListin  from "../assets/telefonopeq.png";
+import logoMistery  from "../assets/logoMysteryNegro.png";
 import "./figureMysteryJackpot.css";
 
 
@@ -17,7 +17,7 @@ function MysteryJackpot() {
         width={171}
         height={180}
         alt="Mystery Jackpot"
-        src={botonListin}
+        src={logoMistery}
         />
         <Figure.Caption>
         Aquí va el texto del Mystery Jackpot
