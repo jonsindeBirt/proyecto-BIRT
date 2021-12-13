@@ -6,7 +6,7 @@
 }
 
   .fondo-imagen {
-    background-image: url("../assets/fondo.jpg");
+    /* background-image: url("../assets/fondo.jpg"); */
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
