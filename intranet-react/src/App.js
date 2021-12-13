@@ -5,7 +5,7 @@ import Directorio from "./components/ventanaDirectorio";
 import Calendario from "./components/calendarioDirectorio";
 import useAuth from "./hooks/useAuth";
 import FormularioTablon from "./components/ventanaAltaAnuncios";
-import ListadoEmpleados from "./components/ventanaListadoEmpleados";
+import ListadoEmpleados from "./rrhh/ventanaListadoEmpleados";
 import AnyadirEmpleado from "./rrhh/alta-empleados";
 import React from "react";
 
