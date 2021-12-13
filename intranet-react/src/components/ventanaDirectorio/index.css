@@ -1,12 +1,8 @@
 
 /* ESTILOS VENTANA directorio */
-.columna-izquierda {
-  height: 100vh;
-  width: 100vw;
-}
 
-  .fondo-imagen {
-    background-image: url("../assets/fondo.jpg");
+.fondo-imagen {
+    background-image: url("../../assets/fondo.png");
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,69 +13,76 @@
 
   }
 
-  .boton-listin{
-    margin-bottom: 3%;
-    background-repeat: no-repeat;
-    background-color: transparent;
-  }
-
-  .ajuste-boton {
-    width: 100%;
-    height: 100%;
-  }
-
-/*   
-@media  {
-  .fondo-imagen {
-    background-color: #B5A89B;
-    background-image: none;
-  }
-} */
-
-
-
-.logotipo-superior {
-padding-right: 20px;
-padding-top: 20px;
-margin-bottom: 3%;
-height: auto; 
-min-width: 250px; 
-
-}
-/* 
-.estilos-desplegable{
-font-size: 2em;
-font-weight: lighter;
-background-color: grey;
-
-}
- */
-.columna-derecha-directorio {
-  height: 100vh;
-  background-color: #B5A89B;
-  padding: 20%;
-
+.rowBotonListin{
+  height: 15vh;
+  vertical-align: top;
 }
 
-.tablon {
-padding-top: 30px;
-width: 100vw;
+/* .primera-linea {
+  padding-top: 40px;
+  padding-left: 40px;
+  vertical-align: top;
+  } */
+  
+ 
+.columna-tablon {
+  vertical-align: bottom;
+  margin-right: 50px;
+  margin-left: 50px;
+  } 
+   
+.linea-contenedor{
 height: 100vh;
-vertical-align:middle;
+padding-top: 40px;
+}
+
+
+.linea-uno {
+  height: auto;
+}
+
+
+
+.linea-dos {
+  align-items: center;
+  height: 15vh;
+
+} 
+
+
+.columna-logotipo {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: 1em;
+}
+  .columna-derecha {
+    vertical-align: top;
+    background-color: transparent;
+
+  }
+    
+
+.boton-listin{
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border-style: none;
+}
+
+.ajuste-boton {
+  width: 20%;
+  height: 20%;
 }
 
 .desplegable{
   vertical-align: top;
   width: 100vw;
-  height: 60vh;
   }
 
-.calendario {
-  height: 40vh;
-  
-}
+  .h-10{
+    height: 10vh;
+  }
 
-.h20{
+.h-20{
   height: 20vh;
 }
 
@@ -89,6 +92,9 @@ vertical-align:middle;
 
 .h-65{
   height: 65vh;
+}
+.h-75{
+  height: 75vh;
 }
 .h35{
   height: 35vh;
@@ -105,7 +111,9 @@ vertical-align:middle;
 }
 
 
-.w-25{
+.w-10{
+  width: 10vw;
+}.w-25{
   width: 25vw;
 }
 .r-padding-0{

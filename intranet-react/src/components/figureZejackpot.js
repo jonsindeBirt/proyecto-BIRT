@@ -1,25 +1,26 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Figure } from "react-bootstrap";
-import botonListin  from "../assets/telefonopeq.png";
+import logoZeJackpot  from "../assets/logoZeJackpotNegro.png";
+import "./figureZejackpot.css";
 
 
-
-function ElTiempo() {
+function ZeJackpot() {
 
     return (
 
         <Figure>
         <Figure.Image
+        className="boton-mystery" 
         width={171}
         height={180}
-        alt="Ze Jackpot"
-        src={botonListin}
+        alt="Mystery Jackpot"
+        src={logoZeJackpot}
         />
         <Figure.Caption>
-        <Link className="links" to="tiempo">{item}</Link>
+        Aquí va el texto del ZeJackpot
         </Figure.Caption>
         </Figure>
     );
 }
-export default ElTiempo;
+export default ZeJackpot;

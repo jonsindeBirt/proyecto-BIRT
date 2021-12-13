@@ -1,11 +1,15 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Figure } from "react-bootstrap";
-import botonListin  from "../assets/telefonopeq.png";
+import nube  from "../assets/nube.svg";
+import "./figureElTiempo.css";
 
 
 
-function ZeJackpot() {
+
+
+function ElTiempo() {
+
 
     return (
 
@@ -13,13 +17,14 @@ function ZeJackpot() {
         <Figure.Image
         width={171}
         height={180}
-        alt="Mystery Jackpot"
-        src={botonListin}
+        alt="El tiempo"
+        src={nube}
         />
         <Figure.Caption>
-        Aquí va el texto del ZeJackpot
+        {/* <Link className="links" to="tiempo">{item}</Link> */}
         </Figure.Caption>
         </Figure>
     );
 }
-export default ZeJackpot;
+
+export default ElTiempo;

@@ -1,6 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FloatingLabel, Form } from "react-bootstrap";
+import "./index.css";
 
 
 function FormularioTablon (){

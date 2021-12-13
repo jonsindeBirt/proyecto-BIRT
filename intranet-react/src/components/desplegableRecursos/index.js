@@ -6,8 +6,11 @@ import {
   DropdownMenu,
 } from "reactstrap";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./index.css";
 
-function DesplegableIT() {
+
+function DesplegableRRHH() {
   const [dropdown, setDropdown] = useState(false);
   const abrirCerrarDropDown = () => {
     setDropdown(!dropdown);
@@ -16,8 +19,8 @@ function DesplegableIT() {
   /**
    * creamos un array con los items que queremos que aparezcan en el desplegable
    */
-  const departamentoIt = ["Abrir incidencias", "Incidencias en curso", "Listado incidencias"];
- 
+
+  const departamentoRRHH = ["Gestión de empleados", "Lista empleados", "Calendario festivos"];
   /**
    * ejecutamos la función map sobre el array itemsDropdown
    *
@@ -29,17 +32,21 @@ function DesplegableIT() {
    *
    * el resultado final es un array con las etiquetas <DropdownItem> con los elementos que queremos mostrar
    */
-  const itemsDropdownReact = departamentoIt.map(function (item, index) {
-    return <DropdownItem key={index}>{item}</DropdownItem>;  
+  const itemsDropdownReact = departamentoRRHH.map(function (item, index) {
+    return <DropdownItem key={index}><Link className="links" to="empleados">{item}</Link>
+    </DropdownItem>;
+      
   });
 
 
   return (
-      <Dropdown style={{ width: "100-vw", textAlign: "justify", textDecorationStyle: "solid", padding: "20px",   borderRadius: "50px", borderBlockColor: "black" }} isOpen={dropdown} toggle={abrirCerrarDropDown}>
-        <DropdownToggle> IT</DropdownToggle>
+    <div>
+      <Dropdown isOpen={dropdown} toggle={abrirCerrarDropDown}>
+        <DropdownToggle> Recursos humanos</DropdownToggle>
         {/* dentro del <DropDownMenu> indicamos que queremos pintar el array de elementos JSX que hemos creado anteriormente */}
         <DropdownMenu>{itemsDropdownReact}</DropdownMenu>
       </Dropdown>
+    </div>
   );
 }
-export default DesplegableIT;
+export default DesplegableRRHH;
