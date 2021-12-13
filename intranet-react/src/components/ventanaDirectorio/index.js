@@ -1,54 +1,38 @@
 //importamos el compoente Link desde react-router-dom
 // import { Link } from "react-router-dom";
 // import { useState } from "react";
-// import logo from "../assets/logocasino.png";
-// import botonListin from "../assets/telefonopeq.png";
+import logo from "../../assets/logocasinopeq.png";
+import iconoListin from "../../assets/telefonopeq.png";
 import "./index.css";
-import {
-  Container,
-  Row,
-  Col,
-  ThemeProvider,
-  Figure,
-  Image,
-} from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import React from "react";
-import DesplegableIT from "../desplegableIT/desplegableIT";
-import DesplegableRRHH from "../desplegableRRHH/desplegableRRHH";
+import DesplegableIT from "../desplegableIT";
+import DesplegableRRHH from "../desplegableRecursos";
 import Calendario from "../calendarioDirectorio";
 import "bootstrap/dist/css/bootstrap.min.css";
-import MostrarTablon from "../mostrarTablon/mostrarTablon";
+import Tablon from "../tablonDirectorio";
 import Button from "@restart/ui/esm/Button";
-import MysteryJackpot from "../figureZeJackpot";
-import ZeJackpot from "../figureZeJackpot";
+import MysteryJackpot from "../figureMysteryJackpot";
+import ZeJackpot from "../figureZejackpot";
 import ElTiempo from "../figureElTiempo";
-
-// import { Dimensions } from "react-native";
-
-// var width = Dimensions.get('window').width; //full width
-// var height = Dimensions.get('window').height; //full height
 
 function Directorio() {
   return (
     <Container fluid className="fondo-imagen">
-      <Row className="h-65">
+      <Row className="linea-contenedor">
         <Row>
-          <Col xs={12} md lg={9} className="columna-izquierda">
-            <Row className="logotipo-superior">
-              {/* <img src={logo} alt="logotipo" /> */}
-            </Row>
-
-            <Row className="tablon">
-              <Col>
-                <MostrarTablon />
-              </Col>
-            </Row>
+          <Col className="linea-uno" md lg="auto">
+            <img src={logo} alt="logotipo" className="columna-logotipo"></img>
           </Col>
 
-          <Col className="columna-derecha-directorio" md lg={3} xs={12}>
+          <Col className="columna-tablon">
+            <Tablon lg md="8" className="tablon" />
+          </Col>
+
+          <Col md="3" className="columna-derecha">
             <Row>
-              <Button className="boton-listin w-25">
-                {/* <Image className="ajuste-boton" src={botonListin} fluid /> */}
+              <Button className="boton-listin">
+                <Image className="ajuste-boton" src={iconoListin} fluid />
               </Button>
             </Row>
 
@@ -58,18 +42,20 @@ function Directorio() {
             </Row>
           </Col>
         </Row>
-        <Row className="h-35">
-          <Col>
+        <Row className="linea-dos">
+          <Col className="columnaCentrada">
             <MysteryJackpot />
           </Col>
-          <Col>
+          <Col className="columnaCentrada">
             <ZeJackpot />
           </Col>
-          <Col>
+          <Col className="columnaCentrada">
             <ElTiempo />
           </Col>
-          <Col>
-            <Row className="calendario">{/* <Calendario /> */}</Row>
+          <Col className="columnaCentrada">
+            <Row>
+              <Calendario />
+            </Row>
           </Col>
         </Row>
       </Row>
