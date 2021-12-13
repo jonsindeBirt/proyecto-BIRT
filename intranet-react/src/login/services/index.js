@@ -9,7 +9,7 @@ function login() {
           })
         : reject({
             error: {
-              message: "Usuario o contraseÃ±a incorrectos",
+              message: "Usuario o contraseña incorrectos",
             },
           });
     }, 1000);
