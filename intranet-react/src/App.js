@@ -30,6 +30,7 @@ function App() {
         <Route path="/" element={<Calendario />} />
         <Route path="/" element={<FormularioTablon />} />
         <Route path="/empleados" element={<ListadoEmpleados />} />
+        <Route path="/gestion-empleados" element={<ListadoEmpleados />} />
       </Routes>
     );
   }

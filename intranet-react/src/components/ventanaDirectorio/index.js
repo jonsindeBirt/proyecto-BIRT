@@ -1,4 +1,4 @@
-	//importamos el compoente Link desde react-router-dom
+﻿	//importamos el compoente Link desde react-router-dom
 	// import { Link } from "react-router-dom";
 	// import { useState } from "react";
 	import logo from "../../assets/logocasinopeq.png";
@@ -10,11 +10,12 @@
 	import DesplegableRRHH from "../desplegableRecursos";
 	import Calendario from "../calendarioDirectorio";
 	import 'bootstrap/dist/css/bootstrap.min.css';
-	import Tablon from "../tablonDirectorio"; 
+	import Tablon from "../tablonDirectorio";
 	import Button from "@restart/ui/esm/Button";
 	import MysteryJackpot from "../figureMysteryJackpot";
 	import ZeJackpot from "../figureZejackpot";
 	import ElTiempo from "../figureElTiempo";
+	import BotonListin from "../botonListin";
 	
 	
 	function Directorio() {
@@ -37,7 +38,7 @@
 
 					<Col md="3" className="columna-derecha"  >
 								<Row >
-									<Button className="boton-listin" >
+									<Button className="boton-listin" onClick={BotonListin} >
 									<Image className="ajuste-boton" src={iconoListin} fluid />
 									</Button>
 								</Row>
@@ -58,9 +59,12 @@
 						<Col className="columnaCentrada">
 							<ElTiempo/>
 						</Col>
-						<Col className="columnaCentrada">
-							<Row >  
-							<Calendario/>
+						<Col>
+							<Row > 
+								<Col className="calendario">
+								<Calendario/>
+								</Col> 
+						
 							</Row>
 						</Col>
 					</Row>

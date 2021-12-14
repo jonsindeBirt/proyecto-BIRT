@@ -45,7 +45,8 @@ padding-top: 40px;
 
 .linea-dos {
   align-items: center;
-  height: 15vh;
+  height: 35vh;
+  size-adjust: initial;
 
 } 
 
@@ -54,10 +55,12 @@ padding-top: 40px;
   background-color: transparent;
   background-repeat: no-repeat;
   background-image: 1em;
+ 
 }
   .columna-derecha {
     vertical-align: top;
     background-color: transparent;
+    padding-top: 20px;
 
   }
     
@@ -76,7 +79,19 @@ padding-top: 40px;
 .desplegable{
   vertical-align: top;
   width: 100vw;
+  margin-bottom: 20px;
   }
+
+ .calendario {
+  background-size: cover;
+  size-adjust: 100vw;
+
+ } 
+
+ .row {
+justify-items: unset;
+
+ }
 
   .h-10{
     height: 10vh;
