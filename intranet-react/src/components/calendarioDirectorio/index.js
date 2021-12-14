@@ -1,5 +1,6 @@
 import DatePicker from "sassy-datepicker";
 // import { ThemeProvider } from 'react-bootstrap';
+import DatePicker from 'sassy-datepicker';
 import "./index.css";
 
 function Calendario() {
@@ -27,6 +28,12 @@ function Calendario() {
   // </ThemeProvider>
 
   return <DatePicker onChange={onChange} />;
+   
+
+  return (
+    
+    <DatePicker className='calendario' onChange={onChange} />
+  );
 }
 
 export default Calendario;

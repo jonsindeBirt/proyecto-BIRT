@@ -1,0 +1,90 @@
+.container {
+    padding-top: 40px;
+}
+
+.primera-row {
+    height: 25vh;    
+      }
+
+.linea-titulos {
+    height: 10vh;    
+
+}      
+
+.columna-logotipo {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: 1em;
+  }
+
+.columna-Titulo {
+    text-decoration:  white;
+    background-color: #A99E92;
+    font-size: 80pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-size-adjust: initial;
+}
+
+.texto-Titulos-Fondo {
+    background-color: #A99E92;
+    vertical-align: middle;
+    color: white;
+    text-align: left;
+    font-size: 80pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+
+}
+
+.texto-Titulos {
+    text-decoration:  white;
+    text-align: left;
+    font-size: 80pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+
+
+}
+
+
+  .h-10{
+    height: 10vh;
+  }
+
+.h-20{
+  height: 20vh;
+}
+
+.h-25{
+  height: 25vh;
+}
+
+.h-65{
+  height: 65vh;
+}
+.h-75{
+  height: 75vh;
+}
+.h35{
+  height: 35vh;
+}
+.h55{
+  height: 55vh;
+}
+.h100{
+  height: 100vh;
+}
+
+.w-100{
+  width: 100vw;
+}
+
+
+.w-10{
+  width: 10vw;
+}.w-25{
+  width: 25vw;
+}
+
+

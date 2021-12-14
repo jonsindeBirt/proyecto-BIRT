@@ -33,7 +33,8 @@ function DesplegableRRHH() {
    * el resultado final es un array con las etiquetas <DropdownItem> con los elementos que queremos mostrar
    */
   const itemsDropdownReact = departamentoRRHH.map(function (item, index) {
-    return <DropdownItem key={index}><Link className="links" to="empleados">{item}</Link>
+    return <DropdownItem key={index}>
+      <Link className="links" to="empleados">{item}</Link>
     </DropdownItem>;
       
   });
@@ -42,7 +43,7 @@ function DesplegableRRHH() {
   return (
     <div>
       <Dropdown isOpen={dropdown} toggle={abrirCerrarDropDown}>
-        <DropdownToggle> Recursos humanos</DropdownToggle>
+        <DropdownToggle><p className="estilo-desplegable"> Recursos humanos</p></DropdownToggle>
         {/* dentro del <DropDownMenu> indicamos que queremos pintar el array de elementos JSX que hemos creado anteriormente */}
         <DropdownMenu>{itemsDropdownReact}</DropdownMenu>
       </Dropdown>

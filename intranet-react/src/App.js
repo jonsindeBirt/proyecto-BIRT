@@ -33,6 +33,7 @@ function App() {
         <Route path="/empleados" element={<ListadoEmpleados />} />
         <Route path="/empleados/nuevo" element={<AnyadirEmpleado />} />
         <Route path="/tiempo" element={<FormularioTablon />} />
+
       </Routes>
     );
   }
