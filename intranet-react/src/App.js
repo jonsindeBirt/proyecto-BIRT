@@ -1,12 +1,14 @@
 import "./App.css";
 import Login from "./login";
 import { Routes, Route } from "react-router-dom";
-import Directorio from "./components/ventanaDirectorio";
+import Directorio from "./ventanaDirectorio";
 import Calendario from "./components/calendarioDirectorio";
 import useAuth from "./hooks/useAuth";
-import FormularioTablon from "./components/ventanaAltaAnuncios";
+import FormularioTablon from "./ventanaAltaAnuncios";
 import ListadoEmpleados from "./rrhh/ventanaListadoEmpleados";
 import AnyadirEmpleado from "./rrhh/alta-empleados";
+import GestionEmpleados from "./rrhh/ventanaGestionEmpleados";
+import ListinTelefonico from "./ventanaListin";
 import React from "react";
 
 function App() {
@@ -33,6 +35,11 @@ function App() {
         <Route path="/empleados" element={<ListadoEmpleados />} />
         <Route path="/empleados/nuevo" element={<AnyadirEmpleado />} />
         <Route path="/tiempo" element={<FormularioTablon />} />
+        <Route path="/gestion" element={<GestionEmpleados />} />
+        <Route path="/listin" element={<ListinTelefonico />} />
+
+
+
 
       </Routes>
     );

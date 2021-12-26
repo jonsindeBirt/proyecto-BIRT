@@ -2,7 +2,7 @@
 /* ESTILOS VENTANA directorio */
 
 .fondo-imagen {
-    background-image: url("../../assets/fondo.png");
+    background-image: url("../assets/fondo.png");
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
@@ -64,12 +64,12 @@ padding-top: 40px;
 
   }
     
-
+ 
 .boton-listin{
   background-repeat: no-repeat;
   background-color: transparent;
   border-style: none;
-}
+} 
 
 .ajuste-boton {
   width: 20%;

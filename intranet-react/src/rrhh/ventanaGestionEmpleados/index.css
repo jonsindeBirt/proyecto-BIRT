@@ -26,6 +26,14 @@
     font-size-adjust: initial;
 }
 
+.texto-Titulos-Apartados {
+  font-size: 25pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+
+
+}
+
 .texto-Titulos-Fondo {
     background-color: #A99E92;
     vertical-align: middle;
@@ -43,10 +51,17 @@
     font-size: 80pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: lighter;
-
-
 }
 
+.apartados-gestion {
+  background-color: white;
+  vertical-align: middle;
+  text-align: left;
+  padding: 10px;
+  border-style: solid 1px;
+  margin: 20px;
+  box-shadow: 10px 5px 25px 0px grey;
+}
 
   .h-10{
     height: 10vh;

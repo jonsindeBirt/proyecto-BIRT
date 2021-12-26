@@ -43,7 +43,7 @@ function DesplegableRRHH() {
   return (
     <div>
       <Dropdown isOpen={dropdown} toggle={abrirCerrarDropDown}>
-        <DropdownToggle><p className="estilo-desplegable"> Recursos humanos</p></DropdownToggle>
+        <DropdownToggle caret><p className="estilo-desplegable"> Recursos humanos</p></DropdownToggle>
         {/* dentro del <DropDownMenu> indicamos que queremos pintar el array de elementos JSX que hemos creado anteriormente */}
         <DropdownMenu>{itemsDropdownReact}</DropdownMenu>
       </Dropdown>
