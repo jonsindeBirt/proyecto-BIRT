@@ -7,6 +7,7 @@ import useAuth from "./hooks/useAuth";
 import FormularioTablon from "./components/ventanaAltaAnuncios";
 import ListadoEmpleados from "./rrhh/ventanaListadoEmpleados";
 import AnyadirEmpleado from "./rrhh/alta-empleados";
+import DetalleEmpleado from "./rrhh/detalle-empleado";
 import React from "react";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/" element={<Calendario />} />
         <Route path="/" element={<FormularioTablon />} />
         <Route path="/empleados" element={<ListadoEmpleados />} />
+        <Route path="/empleados/:id" element={<DetalleEmpleado />} />
         <Route path="/empleados/nuevo" element={<AnyadirEmpleado />} />
         <Route path="/tiempo" element={<FormularioTablon />} />
       </Routes>

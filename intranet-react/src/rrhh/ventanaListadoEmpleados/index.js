@@ -1,13 +1,12 @@
-import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, Table, Toast, Button } from "react-bootstrap";
-import logo from "../../assets/logocasinopeq.png";
-import { Label } from "reactstrap";
-import "./index.css";
+import { useState } from "react";
+import { Button, Col, Container, Row, Table, Spinner } from "react-bootstrap";
 import { useQuery } from "react-query";
-import { getEmpleados } from "../services";
 import { useNavigate } from "react-router-dom";
-
+import logo from "../../assets/logocasinopeq.png";
+import CabeceraEmpleados from "../cabecera-empleados/CabeceraEmpleados";
+import { getEmpleados } from "../services";
+import "./index.css";
 function ListadoEmpleados() {
   const [show, setShow] = useState(false);
   const { status, data, error, isFetching } = useQuery(
@@ -15,37 +14,19 @@ function ListadoEmpleados() {
     getEmpleados,
     {
       onError: (error) => {
-        console.log(error);
         setShow(true);
       },
       refetchOnWindowFocus: false,
     }
   );
-
   const navigate = useNavigate();
-
-  return (
-    <Container className="container">
-      <Row className="primera-row">
-        <Col className="columna-logotipo">
-          <img src={logo} alt="logotipo" className="columna-logotipo"></img>
+  const content = (
+    <>
+      <Row>
+        <Col className="d-flex justify-content-end">
+          <Button onClick={() => navigate("./nuevo")}>Nuevo Empleado</Button>
         </Col>
       </Row>
-
-      <Row className="linea-titulos">
-        <Col>
-          <p className="texto-Titulos-Fondo">
-            <h1>Recursos Humanos</h1>
-          </p>
-        </Col>
-        <Col>
-          <p className="texto-Titulos">
-            <h1>Listado Empleados</h1>
-          </p>
-        </Col>
-      </Row>
-
-      <Row></Row>
 
       <Row>
         <Table responsive="md">
@@ -70,50 +51,65 @@ function ListadoEmpleados() {
             </tr>
           </thead>
           <tbody>
-            {status === "success" && data && !error
-              ? data.map((empleado) => {
-                  return (
-                    <tr
-                      key={empleado.id}
-                      style={{ cursor: "pointer" }}
-                      onClick={() => navigate(`./${empleado.id}`)}
-                    >
-                      <td>{empleado.nombre}</td>
-                      <td>{empleado.apellido}</td>
-                      <td>{empleado.fechaNacimiento}</td>
-                      <td>{empleado.genero}</td>
-                      <td>{empleado.pais}</td>
-                      <td>{empleado.calle}</td>
-                      <td>{empleado.cp}</td>
-                      <td>{empleado.telefono}</td>
-                      <td>{empleado.email}</td>
-                      <td>{empleado.localidad}</td>
-                      <td>{empleado.porcentaje}</td>
-                      <td>{empleado.puesto}</td>
-                      <td>{empleado.dni}</td>
-                      <td>{empleado.fechaEntrada}</td>
-                      <td>{empleado.fechaSalida}</td>
-                      <td>
-                        <ul>
-                          {empleado.departamento.map((departamento) => {
-                            return (
-                              <li key={departamento.idDepartamento}>
-                                <a href={`mailto:${departamento.email}`}>
-                                  {departamento.nombreDepartamento}
-                                </a>
-                              </li>
-                            );
-                          })}
-                        </ul>
-                      </td>
-                    </tr>
-                  );
-                })
-              : null}
+            {status === "success" && data && !error ? (
+              data.map((empleado) => {
+                return (
+                  <tr
+                    key={empleado.id}
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate(`./${empleado.id}`)}
+                  >
+                    <td>{empleado.nombre}</td>
+                    <td>{empleado.apellido}</td>
+                    <td>{empleado.fechaNacimiento}</td>
+                    <td>{empleado.genero}</td>
+                    <td>{empleado.pais}</td>
+                    <td>{empleado.calle}</td>
+                    <td>{empleado.cp}</td>
+                    <td>{empleado.telefono}</td>
+                    <td>
+                      <a href={`mailTo:${empleado.email}`}>{empleado.email}</a>
+                    </td>
+                    <td>{empleado.localidad}</td>
+                    <td>{empleado.porcentaje}</td>
+                    <td>{empleado.puesto}</td>
+                    <td>{empleado.dni}</td>
+                    <td>{empleado.fechaEntrada}</td>
+                    <td>{empleado.fechaSalida}</td>
+                    <td>
+                      <ul>
+                        {empleado.departamento.map((departamento) => {
+                          return (
+                            <li key={departamento.idDepartamento}>
+                              <a href={`mailto:${departamento.email}`}>
+                                {departamento.nombreDepartamento}
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </td>
+                  </tr>
+                );
+              })
+            ) : status === "loading" ? (
+              <tr>
+                <td>
+                  <Spinner animation="border" role="status" />
+                </td>
+              </tr>
+            ) : null}
           </tbody>
         </Table>
       </Row>
-    </Container>
+    </>
+  );
+  return (
+    <CabeceraEmpleados
+      children={content}
+      titulo="Listado Empleados"
+      route={"/"}
+    />
   );
 }
 
