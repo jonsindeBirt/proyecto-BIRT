@@ -7,6 +7,7 @@ import "./index.css";
 import { useQuery } from "react-query";
 import { getEmpleados } from "../services";
 import { useNavigate } from "react-router-dom";
+import NavBarGeneral from "../../components/NavBar/navBar";
 
 function ListadoEmpleados() {
   const [show, setShow] = useState(false);
@@ -112,6 +113,9 @@ function ListadoEmpleados() {
               : null}
           </tbody>
         </Table>
+      </Row>
+      <Row className="colocarAbajo">
+      <NavBarGeneral />
       </Row>
     </Container>
   );

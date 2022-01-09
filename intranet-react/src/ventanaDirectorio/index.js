@@ -39,7 +39,7 @@ function Directorio() {
 
     
             <Row>
-            <Button className="boton-listin"  type="button" id="botonListin" name="botonListin" >
+            <Button className="boton-listin"  type="button" id="botonListin" name="botonListin" href="/listin" >
        <Image className="ajuste-boton" src={iconoListin} fluid />
   </Button> 
             </Row>

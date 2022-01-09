@@ -10,6 +10,7 @@ import AnyadirEmpleado from "./rrhh/alta-empleados";
 import GestionEmpleados from "./rrhh/ventanaGestionEmpleados";
 import ListinTelefonico from "./ventanaListin";
 import React from "react";
+import DesplegableRRHH from "./components/desplegableRecursos";
 
 function App() {
   // esto es un hook personalizado. lo usamos para verificar si el usuario esta logueado o no
@@ -29,17 +30,15 @@ function App() {
   } else {
     return (
       <Routes>
-        <Route path="/" element={<Directorio />} />
-        <Route path="/" element={<Calendario />} />
-        <Route path="/" element={<FormularioTablon />} />
-        <Route path="/empleados" element={<ListadoEmpleados />} />
-        <Route path="/empleados/nuevo" element={<AnyadirEmpleado />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/directorio" element={<Directorio />} />
+        <Route path="/calendario" element={<Calendario />} />
+        <Route path="/forlumarioTablon" element={<FormularioTablon />} />
+        <Route path="/gestion/empleados" element={<ListadoEmpleados />} />
         <Route path="/tiempo" element={<FormularioTablon />} />
         <Route path="/gestion" element={<GestionEmpleados />} />
         <Route path="/listin" element={<ListinTelefonico />} />
-
-
-
+        <Route path="/altaEmpleados" element={<AnyadirEmpleado />} />
 
       </Routes>
     );

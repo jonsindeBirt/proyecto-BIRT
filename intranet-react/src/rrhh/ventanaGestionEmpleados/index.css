@@ -63,6 +63,19 @@
   box-shadow: 10px 5px 25px 0px grey;
 }
 
+/* .triangulo-gestion {
+  background-image: url("../assets/triangulologin.png");
+  height: 11vh;
+  width: 10vh;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+} */
+
+
   .h-10{
     height: 10vh;
   }

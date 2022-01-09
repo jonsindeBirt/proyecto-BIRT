@@ -37,7 +37,7 @@ function AnyadirEmpleado() {
   });
 
   return (
-    <div>
+    <div className="fondo-color">
       <h1>Alta de empleados</h1>
       {data ? (
         <Form

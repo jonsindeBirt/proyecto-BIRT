@@ -16,13 +16,19 @@ import iconoListin from "../assets/telefonopeq.png";
 
 
 function BotonListin() {
-  
+
+  function handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+
 
 return (
   
-  <Button className="boton-listin"  type="button" id="botonListin" name="botonListin" onClick={this.onClick}>
+  <Button className="boton-listin"  type="button" id="botonListin" name="botonListin" href="/listin" onClick={handleClick}>
        <Image className="ajuste-boton" src={iconoListin} fluid />
   </Button>
 
 );             
 }
+export default BotonListin;

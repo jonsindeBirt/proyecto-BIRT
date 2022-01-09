@@ -83,13 +83,13 @@ function Login({ setAuthState }) {
           <form onSubmit={handleSubmit}>
             <Row className="align-items-end h-35">
               <Col lg="12">
-                <button type="submit" className="triangulo"></button>
+                <button type="submit" href="/directorio" className="triangulo"></button>
               </Col>
             </Row>
 
             <Row>
               <Col xs={12}>
-                <label htmlFor="email">Usuario</label>
+                <label className="estiloTextosCasillas" htmlFor="email">Usuario</label>
               </Col>
               <Col xs={12}>
                 <input
@@ -104,7 +104,7 @@ function Login({ setAuthState }) {
             </Row>
             <Row>
               <Col xs={12}>
-                <label htmlFor="password">Contraseña</label>
+                <label className="estiloTextosCasillas" htmlFor="password">Contraseña</label>
               </Col>
               <Col xs={12}>
                 <input

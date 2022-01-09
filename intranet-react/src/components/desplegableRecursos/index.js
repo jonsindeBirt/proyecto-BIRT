@@ -8,6 +8,7 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
+import GestionEmpleados from "../../rrhh/ventanaGestionEmpleados";
 
 
 function DesplegableRRHH() {
@@ -33,8 +34,11 @@ function DesplegableRRHH() {
    * el resultado final es un array con las etiquetas <DropdownItem> con los elementos que queremos mostrar
    */
   const itemsDropdownReact = departamentoRRHH.map(function (item, index) {
-    return <DropdownItem key={index}>
-      <Link className="links" to="empleados">{item}</Link>
+    return <DropdownItem key={item}>
+      <DropdownItem className="links" to={"/gestion"}>{item}</DropdownItem>
+      <DropdownItem className="links" to={"/gestion/empleados"}>{item}</DropdownItem>
+      <DropdownItem className="links" to={"/calendario"}>{item}</DropdownItem>
+
     </DropdownItem>;
       
   });
@@ -45,7 +49,14 @@ function DesplegableRRHH() {
       <Dropdown isOpen={dropdown} toggle={abrirCerrarDropDown}>
         <DropdownToggle caret><p className="estilo-desplegable"> Recursos humanos</p></DropdownToggle>
         {/* dentro del <DropDownMenu> indicamos que queremos pintar el array de elementos JSX que hemos creado anteriormente */}
-        <DropdownMenu>{itemsDropdownReact}</DropdownMenu>
+        {/* 
+        OJO NO ESTOY UTILIZANDO LA FUNCIÓN
+        <DropdownMenu>{itemsDropdownReact} */}
+        <DropdownMenu>
+        <DropdownItem tag="a" href="/gestion">Gestión empleados</DropdownItem>
+        <DropdownItem tag="a" href="/gestion/empleados">Lista empleados</DropdownItem>
+        <DropdownItem tag="a" href="/calendario">Calendario festivos</DropdownItem>
+        </DropdownMenu>
       </Dropdown>
     </div>
   );

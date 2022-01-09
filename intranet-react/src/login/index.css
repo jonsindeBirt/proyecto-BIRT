@@ -4,7 +4,7 @@
 }
 
 .columna-derecha {
-  background-color: #bdbab7;
+  background-color: #646362;
 }
 
 .logotipo-superior {
@@ -16,7 +16,7 @@ max-width: 20vw;
   font-weight:lighter; 
   font-size: 7vh;
   text-align: center;
-  background-color: #474543;
+  background-color: #646362;
   height: 11vh;
   width: 20vh;
 }
@@ -57,6 +57,10 @@ max-width: 20vw;
   height: 11vh;
   width: 20vh;
   margin-bottom: 1rem;
+}
+
+.estiloTextosCasillas {
+color: white;
 }
 
 .h-35{
