@@ -50,7 +50,7 @@ function Login({ setAuthState }) {
         Este snippet:
         1. Clona el estado actual
         2. Reemplaza solo el valor del
-           input que ejecutÃ¯Å¼Â½ el evento
+           input que ejecutará el evento
       */
     const newLoginState = {
       ...loginState,
@@ -104,7 +104,7 @@ function Login({ setAuthState }) {
             </Row>
             <Row>
               <Col xs={12}>
-                <label htmlFor="password">Contrase�a</label>
+                <label htmlFor="password">Contraseña</label>
               </Col>
               <Col xs={12}>
                 <input
