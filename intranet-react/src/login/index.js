@@ -3,7 +3,7 @@ import logo from "../assets/logocasino.png";
 import "./index.css";
 import { useMutation, useQueryClient } from "react-query";
 import { login } from "./services";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
 function Login({ setAuthState }) {
   const [loginState, setLoginState] = useState({
@@ -71,26 +71,35 @@ function Login({ setAuthState }) {
                 alt="logotipo"
               ></img>
             </Col>
-            <Col className="d-flex justify-content-end r-padding-0">
+            <Col className="d-flex justify-content-end r-padding-0 alinearLoginYFlecha">
+              <Row >
               <p className="recuadro-marron-login ">Login</p>
+              </Row>
             </Col>
           </Row>
           <Row className="align-items-center h-65">
             <p className="bienvenidos">Bienvenid@s</p>
           </Row>
         </Col>
+
+
         <Col lg={2} className="columna-derecha">
           <form onSubmit={handleSubmit}>
-            <Row className="align-items-end h-32">
-              <Col lg="12">
-                <button type="submit" href="/directorio" className="triangulo"></button>
-              </Col>
+            <Row className="alinearLoginYFlecha">
+                <Button type="submit" href="/directorio" className="triangulo" ></Button>
             </Row>
 
             <Row>
               <Col xs={12}>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
                 <label className="estiloTextosCasillas" htmlFor="email">Usuario</label>
-              </Col>
+                
+                </Col>
               <Col xs={12}>
                 <input
                   className="recuadros-textos"
@@ -104,6 +113,10 @@ function Login({ setAuthState }) {
             </Row>
             <Row>
               <Col xs={12}>
+              <br/>
+              <br/>
+      
+
                 <label className="estiloTextosCasillas" htmlFor="password">Contraseña</label>
               </Col>
               <Col xs={12}>

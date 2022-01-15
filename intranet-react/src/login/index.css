@@ -8,7 +8,13 @@
 }
 
 .logotipo-superior {
-max-width: 20vw;    
+max-width: 30vw;    
+}
+
+.alinearLoginYFlecha{
+vertical-align: top;
+padding-top: 20vh;
+
 }
 
 .recuadro-marron-login {
@@ -29,14 +35,13 @@ max-width: 20vw;
 }
 .triangulo {
   background-image: url("../assets/triangulologin.png");
-  height: 11vh;
-  width: 10vh;
-  margin-bottom: 1rem;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
   padding: 0;
+  background-size: cover;
+ 
+
 }
 
 /* .tituloscasillas {
@@ -51,6 +56,8 @@ max-width: 20vw;
 .recuadros-textos {
   width: 90%;
   background-color: white;
+  white-space: 30px;
+  height: 3em;
 }
 
 .submit-button{
@@ -61,6 +68,7 @@ max-width: 20vw;
 
 .estiloTextosCasillas {
 color: white;
+white-space: 20px;
 }
 
 .h-35{
