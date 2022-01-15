@@ -38,17 +38,23 @@ function Directorio() {
           <Col md="3" className="columna-derecha">
 
     
-            <Row>
+            <Row className="lineaListin">
             <Button className="boton-listin"  type="button" id="botonListin" name="botonListin" href="/listin" >
        <Image className="ajuste-boton" src={iconoListin} fluid />
   </Button> 
             </Row>
 
+            <Row className="desplegable">
+            </Row>
 
             <Row className="desplegable">
               <DesplegableIT />
+            </Row>
+            
+            <Row className="desplegable">
               <DesplegableRRHH />
             </Row>
+
           </Col>
         </Row>
         <Row className="linea-dos">

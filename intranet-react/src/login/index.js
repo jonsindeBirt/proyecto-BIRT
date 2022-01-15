@@ -72,7 +72,7 @@ function Login({ setAuthState }) {
               ></img>
             </Col>
             <Col className="d-flex justify-content-end r-padding-0">
-              <p className="recuadro-marron-login">Login</p>
+              <p className="recuadro-marron-login ">Login</p>
             </Col>
           </Row>
           <Row className="align-items-center h-65">
@@ -81,7 +81,7 @@ function Login({ setAuthState }) {
         </Col>
         <Col lg={2} className="columna-derecha">
           <form onSubmit={handleSubmit}>
-            <Row className="align-items-end h-35">
+            <Row className="align-items-end h-32">
               <Col lg="12">
                 <button type="submit" href="/directorio" className="triangulo"></button>
               </Col>
