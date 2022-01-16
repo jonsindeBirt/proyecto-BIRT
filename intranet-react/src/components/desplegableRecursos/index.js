@@ -8,6 +8,7 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
+import GestionEmpleados from "../../rrhh/ventanaGestionEmpleados";
 
 function DesplegableRRHH() {
   const [dropdown, setDropdown] = useState(false);
@@ -46,10 +47,16 @@ function DesplegableRRHH() {
    */
   const itemsDropdownReact = departamentoRRHH.map(function (item, index) {
     return (
-      <DropdownItem key={index}>
-        <Link className="links" to={item.url}>
-          {item.nombre}
-        </Link>
+      <DropdownItem key={item}>
+        <DropdownItem className="links" to={"/gestion"}>
+          {item}
+        </DropdownItem>
+        <DropdownItem className="links" to={"/gestion/empleados"}>
+          {item}
+        </DropdownItem>
+        <DropdownItem className="links" to={"/calendario"}>
+          {item}
+        </DropdownItem>
       </DropdownItem>
     );
   });
@@ -57,11 +64,24 @@ function DesplegableRRHH() {
   return (
     <div>
       <Dropdown isOpen={dropdown} toggle={abrirCerrarDropDown}>
-        <DropdownToggle className="boton-toggle">
-          Recursos humanos
+        <DropdownToggle>
+          <p className="estilo-desplegable"> Recursos humanos</p>
         </DropdownToggle>
         {/* dentro del <DropDownMenu> indicamos que queremos pintar el array de elementos JSX que hemos creado anteriormente */}
-        <DropdownMenu>{itemsDropdownReact}</DropdownMenu>
+        {/* 
+        OJO NO ESTOY UTILIZANDO LA FUNCI�N
+        <DropdownMenu>{itemsDropdownReact} */}
+        <DropdownMenu>
+          <DropdownItem tag="a" href="/gestion">
+            Gesti�n empleados
+          </DropdownItem>
+          <DropdownItem tag="a" href="/gestion/empleados">
+            Lista empleados
+          </DropdownItem>
+          <DropdownItem tag="a" href="/calendario">
+            Calendario festivos
+          </DropdownItem>
+        </DropdownMenu>
       </Dropdown>
     </div>
   );

@@ -1,22 +1,28 @@
 //importamos el compoente Link desde react-router-dom
 // import { Link } from "react-router-dom";
 // import { useState } from "react";
-import logo from "../../assets/logocasinopeq.png";
-import iconoListin from "../../assets/telefonopeq.png";
+import logo from "../assets/logocasinopeq.png";
+import iconoListin from "../assets/telefonopeq.png";
 import "./index.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import React from "react";
-import DesplegableIT from "../desplegableIT";
-import DesplegableRRHH from "../desplegableRecursos";
-import Calendario from "../calendarioDirectorio";
+import DesplegableIT from "../components/desplegableIT";
+import DesplegableRRHH from "../components/desplegableRecursos";
+import Calendario from "../components/calendarioDirectorio";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Tablon from "../tablonDirectorio";
+import Tablon from "../components/tablonDirectorio";
 import Button from "@restart/ui/esm/Button";
-import MysteryJackpot from "../figureMysteryJackpot";
-import ZeJackpot from "../figureZejackpot";
-import ElTiempo from "../figureElTiempo";
+import MysteryJackpot from "../components/figureMysteryJackpot";
+import ZeJackpot from "../components/figureZejackpot";
+import ElTiempo from "../components/figureElTiempo";
+import BotonListin from "../components/botonListin";
+// import { handleSubmit } from "react-final-form";
+
 
 function Directorio() {
+
+
+  
   return (
     <Container fluid className="fondo-imagen">
       <Row className="linea-contenedor">
@@ -30,16 +36,25 @@ function Directorio() {
           </Col>
 
           <Col md="3" className="columna-derecha">
-            <Row>
-              <Button className="boton-listin">
-                <Image className="ajuste-boton" src={iconoListin} fluid />
-              </Button>
+
+    
+            <Row className="lineaListin">
+            <Button className="boton-listin"  type="button" id="botonListin" name="botonListin" href="/listin" >
+       <Image className="ajuste-boton" src={iconoListin} fluid />
+  </Button> 
+            </Row>
+
+            <Row className="desplegable">
             </Row>
 
             <Row className="desplegable">
               <DesplegableIT />
+            </Row>
+            
+            <Row className="desplegable">
               <DesplegableRRHH />
             </Row>
+
           </Col>
         </Row>
         <Row className="linea-dos">

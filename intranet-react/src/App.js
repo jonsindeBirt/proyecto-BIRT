@@ -1,14 +1,17 @@
 import "./App.css";
 import Login from "./login";
 import { Routes, Route } from "react-router-dom";
-import Directorio from "./components/ventanaDirectorio";
+import Directorio from "./ventanaDirectorio";
 import Calendario from "./components/calendarioDirectorio";
 import useAuth from "./hooks/useAuth";
-import FormularioTablon from "./components/ventanaAltaAnuncios";
+import FormularioTablon from "./ventanaAltaAnuncios";
 import ListadoEmpleados from "./rrhh/ventanaListadoEmpleados";
 import AnyadirEmpleado from "./rrhh/alta-empleados";
 import DetalleEmpleado from "./rrhh/detalle-empleado";
+import GestionEmpleados from "./rrhh/ventanaGestionEmpleados";
+import ListinTelefonico from "./ventanaListin";
 import React from "react";
+import DesplegableRRHH from "./components/desplegableRecursos";
 
 function App() {
   // esto es un hook personalizado. lo usamos para verificar si el usuario esta logueado o no
@@ -28,13 +31,16 @@ function App() {
   } else {
     return (
       <Routes>
-        <Route path="/" element={<Directorio />} />
-        <Route path="/" element={<Calendario />} />
-        <Route path="/" element={<FormularioTablon />} />
-        <Route path="/empleados" element={<ListadoEmpleados />} />
-        <Route path="/empleados/:id" element={<DetalleEmpleado />} />
-        <Route path="/empleados/nuevo" element={<AnyadirEmpleado />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/directorio" element={<Directorio />} />
+        <Route path="/calendario" element={<Calendario />} />
+        <Route path="/forlumarioTablon" element={<FormularioTablon />} />
+        <Route path="/gestion/empleados" element={<ListadoEmpleados />} />
+        <Route path="/gestion/empleados/:id" element={<DetalleEmpleado />} />
+        <Route path="/gestion/empleados/nuevo" element={<AnyadirEmpleado />} />
         <Route path="/tiempo" element={<FormularioTablon />} />
+        <Route path="/gestion" element={<GestionEmpleados />} />
+        <Route path="/listin" element={<ListinTelefonico />} />
       </Routes>
     );
   }
