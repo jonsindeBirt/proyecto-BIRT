@@ -1,5 +1,5 @@
 .container {
-    padding: 40px;
+    padding-top: 40px;
 }
 
 .primera-row {
@@ -43,19 +43,8 @@
     font-size: 80pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: lighter;
-}
 
-.colocarAbajo {
-vertical-align: bottom;
 
-}
-
-th{
-  font-size: 14px;
-}
-td{
-  font-size: 12px;
-  word-break: break-all;
 }
 
 

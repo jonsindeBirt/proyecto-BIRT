@@ -3,7 +3,8 @@ import logo from "../assets/logocasino.png";
 import "./index.css";
 import { useMutation, useQueryClient } from "react-query";
 import { login } from "./services";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function Login({ setAuthState }) {
   const [loginState, setLoginState] = useState({
@@ -14,12 +15,14 @@ function Login({ setAuthState }) {
   const [loginError, setLoginError] = useState(false);
   const [loginErrorMessage, setLoginErrorMessage] = useState("");
   const queryClient = useQueryClient();
+  const navigate = useNavigate();
 
   const { mutate } = useMutation(login, {
     onSuccess: ({ data }) => {
       setLoginError(false);
       setLoginErrorMessage("");
       setAuthState(true);
+      navigate("/directorio");
     },
     onError: ({ error }) => {
       setLoginError(true);
@@ -71,25 +74,34 @@ function Login({ setAuthState }) {
                 alt="logotipo"
               ></img>
             </Col>
-            <Col className="d-flex justify-content-end r-padding-0">
-              <p className="recuadro-marron-login">Login</p>
+            <Col className="d-flex justify-content-end r-padding-0 alinearLoginYFlecha">
+              <Row>
+                <p className="recuadro-marron-login ">Login</p>
+              </Row>
             </Col>
           </Row>
           <Row className="align-items-center h-65">
             <p className="bienvenidos">Bienvenid@s</p>
           </Row>
         </Col>
+
         <Col lg={2} className="columna-derecha">
           <form onSubmit={handleSubmit}>
-            <Row className="align-items-end h-35">
-              <Col lg="12">
-                <button type="submit" className="triangulo"></button>
-              </Col>
+            <Row className="alinearLoginYFlecha">
+              <Button type="submit" className="triangulo"></Button>
             </Row>
 
             <Row>
               <Col xs={12}>
-                <label htmlFor="email">Usuario</label>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <label className="estiloTextosCasillas" htmlFor="email">
+                  Usuario
+                </label>
               </Col>
               <Col xs={12}>
                 <input
@@ -104,7 +116,12 @@ function Login({ setAuthState }) {
             </Row>
             <Row>
               <Col xs={12}>
-                <label htmlFor="password">Contraseña</label>
+                <br />
+                <br />
+
+                <label className="estiloTextosCasillas" htmlFor="password">
+                  Contrase�a
+                </label>
               </Col>
               <Col xs={12}>
                 <input

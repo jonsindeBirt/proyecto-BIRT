@@ -3,13 +3,13 @@ import { useState } from "react";
 import { Button, Col, Container, Row, Table, Spinner } from "react-bootstrap";
 import { useQuery } from "react-query";
 import { useNavigate } from "react-router-dom";
-import logo from "../../assets/logocasinopeq.png";
-import CabeceraEmpleados from "../cabecera-empleados/CabeceraEmpleados";
 import { getEmpleados } from "../services";
 import "./index.css";
+import NavBarGeneral from "../../components/NavBar/navBar";
+
 function ListadoEmpleados() {
   const [show, setShow] = useState(false);
-  const { status, data, error, isFetching } = useQuery(
+  const { status, empleados, error, isFetching } = useQuery(
     "empleados",
     getEmpleados,
     {
@@ -20,8 +20,8 @@ function ListadoEmpleados() {
     }
   );
   const navigate = useNavigate();
-  const content = (
-    <>
+  return (
+    <Container>
       <Row>
         <Col className="d-flex justify-content-end">
           <Button onClick={() => navigate("./nuevo")}>Nuevo Empleado</Button>
@@ -51,8 +51,8 @@ function ListadoEmpleados() {
             </tr>
           </thead>
           <tbody>
-            {status === "success" && data && !error ? (
-              data.map((empleado) => {
+            {status === "success" && empleados && !error ? (
+              empleados.map((empleado) => {
                 return (
                   <tr
                     key={empleado.id}
@@ -102,14 +102,10 @@ function ListadoEmpleados() {
           </tbody>
         </Table>
       </Row>
-    </>
-  );
-  return (
-    <CabeceraEmpleados
-      children={content}
-      titulo="Listado Empleados"
-      route={"/"}
-    />
+      <Row className="colocarAbajo">
+        <NavBarGeneral />
+      </Row>
+    </Container>
   );
 }
 

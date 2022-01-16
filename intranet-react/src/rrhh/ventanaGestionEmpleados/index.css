@@ -9,7 +9,26 @@
 .linea-titulos {
     height: 10vh;    
 
-}      
+} 
+
+.triangulo {
+  /* background-image: url("../assets/triangulologin.png"); */
+  height: 5vh;
+  width: 5vh;
+  /* margin-bottom: 1rem; */
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+  /* background-size: cover; */
+  padding: 0;
+}
+
+.lineaListin {
+padding-top: 5em;
+align-items: flex-end;
+
+}
 
 .columna-logotipo {
     background-color: transparent;
@@ -24,6 +43,18 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: lighter;
     font-size-adjust: initial;
+}
+
+.texto-Titulos-Apartados {
+  font-size: 25pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+  height: 25px;
+  width: 300px;
+  vertical-align: middle;
+  padding: 0em;
+
+
 }
 
 .texto-Titulos-Fondo {
@@ -45,18 +76,27 @@
     font-weight: lighter;
 }
 
-.colocarAbajo {
-vertical-align: bottom;
-
+.apartados-gestion {
+  background-color: white;
+  vertical-align: middle;
+  text-align: left;
+  padding: 10px;
+  border-style: solid 1px;
+  margin: 20px;
+  box-shadow: 10px 5px 25px 0px grey;
 }
 
-th{
-  font-size: 14px;
-}
-td{
-  font-size: 12px;
-  word-break: break-all;
-}
+/* .triangulo-gestion {
+  background-image: url("../assets/triangulopeq.png");
+  height: 11vh;
+  width: 10vh;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+} */
 
 
   .h-10{
