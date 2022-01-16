@@ -36,38 +36,6 @@ function GestionEmpleados() {
         </Col>
       </Row>
 
-<<<<<<< Updated upstream
-
-
-
-      <Row h-10>
-          <Col> </Col>
-          <Col className="apartados-gestion">
-          
-             <p className="texto-Titulos-Apartados" className="texto-Titulos-Apartados">
-            <Button type="Input" href="/altaEmpleados" img src={triangulop} className="triangulo"></Button> Alta </p> </Col>
-          <Col> </Col>
-      </Row>
-
-      <Row h-10>
-          <Col> </Col>
-          <Col className="apartados-gestion"> <p className="texto-Titulos-Apartados">
-            <Button type="Input" href="/altaEmpleados" img src={triangulop} className="triangulo"></Button> Baja </p> </Col>
-          <Col> </Col>
-      </Row>
-
-      <Row h-10>
-          <Col> </Col>
-          <Col className="apartados-gestion"> <p className="texto-Titulos-Apartados">
-          <Button type="Input" href="/altaEmpleados" img src={triangulop} className="triangulo"></Button> Modificación
-          </p> </Col>
-          <Col> </Col>
-      </Row>
-
-      <Row>
-      <NavBarGeneral />
-      </Row>
-=======
       <Row>
         <Col> </Col>
         <Col className="apartados-gestion">
@@ -124,7 +92,6 @@ function GestionEmpleados() {
         <Col> </Col>
       </Row>
     <FooterGeneral />
->>>>>>> Stashed changes
     </Container>
   );
 }
