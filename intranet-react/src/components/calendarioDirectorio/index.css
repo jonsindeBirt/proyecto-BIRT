@@ -1,10 +1,38 @@
-/* .sdp {
-    background: rgb(152, 128, 207);
-  } */
+ .sdp {
+    background: #dfd9d3;
+    background-size: 10vmax;
+  } 
 
   .monthTitleTextStyle {
     color: #6d95da;
-    font-size: 8em;
+    font-size: 1em;
   }
 
-  
+  .sdp--month-picker{
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+.sdp--dates-grid {
+  font-size: 20px;
+  font-weight: bolder;
+
+}
+
+
+.sdp--text__inactive {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.sdp--text__inactive {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+
+}
+
+  .calendario {
+
+    
+  }

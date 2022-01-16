@@ -27,6 +27,12 @@ function Calendario() {
   // </ThemeProvider>
 
   return <DatePicker onChange={onChange} />;
+   
+
+  return (
+    
+    <DatePicker className='calendario' onChange={onChange} />
+  );
 }
 
 export default Calendario;

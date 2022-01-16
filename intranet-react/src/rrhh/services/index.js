@@ -49,16 +49,16 @@ const empleados = [
     ],
   },
 ];
-function getEmpleados() {
+async function getEmpleados() {
   //create an array of empleados
 
-  // const response = await fetch(`/empleados`).catch((error) => error.response);
-  // if (response.status !== 200) {
-  //   const error = await response.json();
-  //   return Promise.reject(error.error);
-  // }
-  // const data = await response.json();
-  return empleados;
+  const response = await fetch(`/empleados`).catch((error) => error.response);
+  if (response.status !== 200) {
+    const error = await response.json();
+    return Promise.reject(error.error);
+  }
+  const data = await response.json();
+  return data;
 }
 
 async function createEmployee(empleado) {
@@ -79,17 +79,17 @@ async function createEmployee(empleado) {
   return data;
 }
 
-function getEmpleado(id) {
-  // const response = await fetch(`/empleados/${id}`).catch(
-  //   (error) => error.response
-  // );
-  // if (response.status !== 200) {
-  //   const error = await response.json();
-  //   return Promise.reject(error.error);
-  // }
-  // const data = await response.json();
-  // return data;
-  return empleados.find((empleado) => empleado.id === parseInt(id));
+async function getEmpleado(id) {
+  const response = await fetch(`/empleados/${id}`).catch(
+    (error) => error.response
+  );
+  if (response.status !== 200) {
+    const error = await response.json();
+    return Promise.reject(error.error);
+  }
+  const data = await response.json();
+  return data;
+  // return empleados.find((empleado) => empleado.id === parseInt(id));
 }
 
 async function getDepartamentos() {

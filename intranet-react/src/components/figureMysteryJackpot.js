@@ -20,7 +20,7 @@ function MysteryJackpot() {
         src={logoMistery}
         />
         <Figure.Caption>
-        Aquí va el texto del Mystery Jackpot
+        <p>Aquí va el texto del Mystery Jackpot</p>
         </Figure.Caption>
         </Figure>
     );

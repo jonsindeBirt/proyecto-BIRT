@@ -2,7 +2,7 @@
 /* ESTILOS VENTANA directorio */
 
 .fondo-imagen {
-    background-image: url("../../assets/fondo.png");
+    background-image: url("../assets/fondo.png");
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
@@ -45,7 +45,8 @@ padding-top: 40px;
 
 .linea-dos {
   align-items: center;
-  height: 15vh;
+  height: 35vh;
+  size-adjust: initial;
 
 } 
 
@@ -54,19 +55,22 @@ padding-top: 40px;
   background-color: transparent;
   background-repeat: no-repeat;
   background-image: 1em;
+ 
 }
   .columna-derecha {
     vertical-align: top;
     background-color: transparent;
+    padding-top: 20px;
+    background-color: #B5A89B;
 
   }
     
-
+ 
 .boton-listin{
   background-repeat: no-repeat;
   background-color: transparent;
   border-style: none;
-}
+} 
 
 .ajuste-boton {
   width: 20%;
@@ -75,8 +79,20 @@ padding-top: 40px;
 
 .desplegable{
   vertical-align: top;
-  width: 100%;
+  width: 100vw;
+  margin-bottom: 20px;
   }
+
+ .calendario {
+  background-size: cover;
+  size-adjust: 100vw;
+
+ } 
+
+ .row {
+justify-items: unset;
+
+ }
 
   .h-10{
     height: 10vh;
