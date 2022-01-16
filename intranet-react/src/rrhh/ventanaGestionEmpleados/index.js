@@ -7,8 +7,9 @@ import "./index.css";
 import { useQuery } from "react-query";
 // import { getEmpleados } from "../services";
 import { useNavigate } from "react-router-dom";
-import NavBarGeneral from "../../components/NavBar/navBar";
+import NavBarGeneral from "../../components/NavBar";
 import triangulop from "../../assets/triangulopeq.png";
+import FooterGeneral from "../../components/footer";
 
 
 
@@ -25,7 +26,7 @@ function GestionEmpleados() {
       <Row className="linea-titulos">
         <Col>
           <p className="texto-Titulos-Fondo">
-            <h1>Recursos Humanos</h1>
+            <h1>&nbsp;Recursos Humanos</h1>
           </p>
         </Col>
         <Col>
@@ -35,6 +36,7 @@ function GestionEmpleados() {
         </Col>
       </Row>
 
+<<<<<<< Updated upstream
 
 
 
@@ -65,6 +67,64 @@ function GestionEmpleados() {
       <Row>
       <NavBarGeneral />
       </Row>
+=======
+      <Row>
+        <Col> </Col>
+        <Col className="apartados-gestion">
+          <p
+            className="texto-Titulos-Apartados"
+            className="texto-Titulos-Apartados"
+          >
+            <Button
+              type="Input"
+              href="/gestion/empleados/nuevo"
+              img
+              src={triangulop}
+              className="triangulo"
+            ></Button>{" "}
+            Alta{" "}
+          </p>{" "}
+        </Col>
+        <Col> </Col>
+      </Row>
+
+      <Row>
+        <Col> </Col>
+        <Col className="apartados-gestion">
+          {" "}
+          <p className="texto-Titulos-Apartados">
+            <Button
+              type="Input"
+              href="/altaEmpleados"
+              img
+              src={triangulop}
+              className="triangulo"
+            ></Button>{" "}
+            Baja{" "}
+          </p>{" "}
+        </Col>
+        <Col> </Col>
+      </Row>
+
+      <Row>
+        <Col> </Col>
+        <Col className="apartados-gestion">
+          {" "}
+          <p className="texto-Titulos-Apartados">
+            <Button
+              type="Input"
+              href="/altaEmpleados"
+              img
+              src={triangulop}
+              className="triangulo"
+            ></Button>{" "}
+            Modificación
+          </p>{" "}
+        </Col>
+        <Col> </Col>
+      </Row>
+    <FooterGeneral />
+>>>>>>> Stashed changes
     </Container>
   );
 }

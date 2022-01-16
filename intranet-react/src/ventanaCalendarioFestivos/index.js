@@ -1,9 +1,10 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Navbar, Table } from "react-bootstrap";
-import logo from "../../assets/logocasinopeq.png";
+import logo from "../assets/logocasinopeq.png";
 import { Label } from "reactstrap";
 import "./index.css";
+import FooterGeneral from "../components/footer";
 
 
 function CalendarioFestivos (){
@@ -22,8 +23,8 @@ return (
           </Row>
 
           <Row className="linea-titulos">
-            <Col><p className="texto-Titulos-Fondo"><h1>Recursos Humanos</h1></p></Col>
-            <Col><p className="texto-Titulos"><h1>Listado Empleados</h1></p></Col>
+            <Col><p className="texto-Titulos-Fondo"><h1>&nbsp;&nbsp;Recursos Humanos</h1></p></Col>
+            <Col><p className="texto-Titulos"><h1>Calendario festivos</h1></p></Col>
 
           
           </Row>
@@ -80,7 +81,10 @@ return (
   </Table>
 
     </Row>
+    <FooterGeneral />
+
     </Container>
+    
   );
 }
 

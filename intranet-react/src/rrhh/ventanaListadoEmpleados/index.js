@@ -6,8 +6,16 @@ import { Label } from "reactstrap";
 import "./index.css";
 import { useQuery } from "react-query";
 import { getEmpleados } from "../services";
+<<<<<<< Updated upstream
 import { useNavigate } from "react-router-dom";
 import NavBarGeneral from "../../components/NavBar/navBar";
+=======
+import "./index.css";
+import FooterGeneral from "../../components/footer";
+import logo from "../../assets/logocasinopeq.png";
+
+
+>>>>>>> Stashed changes
 
 function ListadoEmpleados() {
   const [show, setShow] = useState(false);
@@ -26,12 +34,35 @@ function ListadoEmpleados() {
   const navigate = useNavigate();
 
   return (
+<<<<<<< Updated upstream
     <Container className="container">
       <Row className="primera-row">
         <Col className="columna-logotipo">
           <img src={logo} alt="logotipo" className="columna-logotipo"></img>
+=======
+    <Container>
+            <Row className="primera-row">
+        <Col className="columna-logotipo">
+          <img src={logo} alt="logotipo" className="columna-logotipo"></img>
         </Col>
       </Row>
+
+      <Row className="linea-titulos">
+        <Col>
+          <p className="texto-Titulos-Fondo">
+            <h1>&nbsp;Recursos Humanos</h1>
+          </p>
+        </Col>
+        <Col>
+          <p className="texto-Titulos">
+            <h1>Listado Empleados</h1>
+          </p>
+>>>>>>> Stashed changes
+        </Col>
+      </Row>
+  
+        
+   
 
       <Row className="linea-titulos">
         <Col>
@@ -114,9 +145,18 @@ function ListadoEmpleados() {
           </tbody>
         </Table>
       </Row>
+<<<<<<< Updated upstream
       <Row className="colocarAbajo">
       <NavBarGeneral />
       </Row>
+=======
+
+         {/* <Col className="d-flex justify-content-end">
+          <Button onClick={() => navigate("./nuevo")}>Nuevo Empleado</Button>
+        </Col> */}
+
+      <FooterGeneral />
+>>>>>>> Stashed changes
     </Container>
   );
 }

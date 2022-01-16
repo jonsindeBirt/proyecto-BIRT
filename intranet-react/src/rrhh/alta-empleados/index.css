@@ -1,4 +1,40 @@
-.fondo-color {
 
-    background-color: #474543;
+
+.container {
+    padding: 40px;
 }
+
+.primera-row {
+    height: 25vh;    
+      }
+
+.formulario {
+    padding: 20px;
+    
+}
+
+.estilo-label {
+    margin-top: 20px;
+    font-weight: bolder;
+ 
+}
+
+
+.boton-sombra {
+    background-color: white;
+    vertical-align: middle;
+    text-align: center;
+    color: black;
+    padding: 10px;
+    border-style: solid 1px;
+    border-color: black;
+    font-weight: bolder;
+    margin: 20px;
+    box-shadow: 10px 5px 25px 0px grey;
+  }
+
+  .boton-sombra:hover {
+    background-color: white;
+    color: black;
+
+  }

@@ -37,6 +37,19 @@
 
 }
 
+.container {
+  padding: 40px;
+}
+
+.primera-row {
+  height: 25vh;    
+    }
+
+.linea-titulos {
+  height: 10vh;    
+
+} 
+
 .texto-Titulos {
     text-decoration:  white;
     text-align: left;
