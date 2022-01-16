@@ -19,19 +19,14 @@ function App() {
 
   // comprobamos si el usuario esta logueado o no
   if (!authState) {
-    /**
-     * Usamos Routes para agrupar las rutas que tendrá nuestra aplicación.
-     * Cuando haya un cambio en la ruta del navegador, si coincide con alguna de las rutas, se ejecutará el componente correspondiente.
-     */
-    return (
-      <Routes>
-        <Route path="/" element={<Login setAuthState={setAuthState} />} />
-      </Routes>
-    );
+    return <Login setAuthState={setAuthState} />;
   } else {
     return (
+      /**
+       * Usamos Routes para agrupar las rutas que tendrá nuestra aplicación.
+       * Cuando haya un cambio en la ruta del navegador, si coincide con alguna de las rutas, se ejecutará el componente correspondiente.
+       */
       <Routes>
-        <Route path="/login" element={<Login />} />
         <Route path="/directorio" element={<Directorio />} />
         <Route path="/calendario" element={<Calendario />} />
         <Route path="/forlumarioTablon" element={<FormularioTablon />} />

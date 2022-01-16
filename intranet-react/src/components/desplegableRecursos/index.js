@@ -20,16 +20,15 @@ function DesplegableRRHH() {
    * creamos un array con los items que queremos que aparezcan en el desplegable
    */
 
-  const departamentoRRHH = [
+  const itemsRRHH = [
     {
+      id: 1,
       nombre: "Gestión de empleados",
-      url: "/empleados",
+      url: "/gestion",
     },
+    { id: 2, nombre: "Lista empleados", url: "/gestion/empleados" },
     {
-      nombre: "Lista empleados",
-      url: "/empleados",
-    },
-    {
+      id: 3,
       nombre: "Calendario festivos",
       url: "/calendario",
     },
@@ -45,18 +44,12 @@ function DesplegableRRHH() {
    *
    * el resultado final es un array con las etiquetas <DropdownItem> con los elementos que queremos mostrar
    */
-  const itemsDropdownReact = departamentoRRHH.map(function (item, index) {
+  const itemsDropdownReact = itemsRRHH.map(function (item, index) {
     return (
-      <DropdownItem key={item}>
-        <DropdownItem className="links" to={"/gestion"}>
-          {item}
-        </DropdownItem>
-        <DropdownItem className="links" to={"/gestion/empleados"}>
-          {item}
-        </DropdownItem>
-        <DropdownItem className="links" to={"/calendario"}>
-          {item}
-        </DropdownItem>
+      <DropdownItem key={item.id}>
+        <Link className="links" to={item.url}>
+          {item.nombre}
+        </Link>
       </DropdownItem>
     );
   });
@@ -71,17 +64,7 @@ function DesplegableRRHH() {
         {/* 
         OJO NO ESTOY UTILIZANDO LA FUNCI�N
         <DropdownMenu>{itemsDropdownReact} */}
-        <DropdownMenu>
-          <DropdownItem tag="a" href="/gestion">
-            Gesti�n empleados
-          </DropdownItem>
-          <DropdownItem tag="a" href="/gestion/empleados">
-            Lista empleados
-          </DropdownItem>
-          <DropdownItem tag="a" href="/calendario">
-            Calendario festivos
-          </DropdownItem>
-        </DropdownMenu>
+        <DropdownMenu>{itemsDropdownReact}</DropdownMenu>
       </Dropdown>
     </div>
   );
