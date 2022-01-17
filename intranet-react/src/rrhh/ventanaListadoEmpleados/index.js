@@ -118,10 +118,9 @@ function ListadoEmpleados() {
           </tbody>
         </Table>
       </Row>
-      <Row className="colocarAbajo">
-      <NavBarGeneral />
-      </Row>
+      <FooterGeneral />
     </Container>
+    
   );
 }
 
