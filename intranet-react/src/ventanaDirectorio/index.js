@@ -8,7 +8,7 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import React from "react";
 import DesplegableIT from "../components/desplegableIT";
 import DesplegableRRHH from "../components/desplegableRecursos";
-import Calendario from "../components/calendarioDirectorio";
+import CalendarioFestivos from "../components/calendarioDirectorio";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Tablon from "../components/tablonDirectorio";
 import Button from "@restart/ui/esm/Button";
@@ -47,9 +47,7 @@ function Directorio() {
             <Row className="desplegable">
             </Row>
 
-            <Row className="desplegable">
-              <DesplegableIT />
-            </Row>
+            
             
             <Row className="desplegable">
               <DesplegableRRHH />
@@ -69,7 +67,7 @@ function Directorio() {
           </Col>
           <Col className="columnaCentrada">
             <Row>
-              <Calendario />
+              <CalendarioFestivos />
             </Row>
           </Col>
         </Row>

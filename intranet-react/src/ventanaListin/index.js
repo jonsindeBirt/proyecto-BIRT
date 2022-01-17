@@ -7,6 +7,7 @@ import "./index.css";
 import { useQuery } from "react-query";
 import { getEmpleados } from "../rrhh/services";
 import { useNavigate } from "react-router-dom";
+import FooterGeneral from "../components/footer";
 
 function ListinTelefonico() {
   const [show, setShow] = useState(false);
@@ -36,7 +37,7 @@ function ListinTelefonico() {
       <Row className="linea-titulos">
         <Col>
           <p className="texto-Titulos-Fondo">
-            <h1>Agenda</h1>
+            <h1>&nbsp;&nbsp;Agenda</h1>
           </p>
         </Col>
         <Col>
@@ -95,6 +96,7 @@ function ListinTelefonico() {
           </tbody>
         </Table>
       </Row>
+      <FooterGeneral />
     </Container>
   );
 }

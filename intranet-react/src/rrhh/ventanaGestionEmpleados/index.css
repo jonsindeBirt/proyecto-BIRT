@@ -12,15 +12,12 @@
 } 
 
 .triangulo {
-  /* background-image: url("../assets/triangulologin.png"); */
+  background-image: url("../../assets/triangulopeq.png");
   height: 5vh;
   width: 5vh;
-  /* margin-bottom: 1rem; */
+  border-style: none;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: center;
-  vertical-align: middle;
-  /* background-size: cover; */
   padding: 0;
 }
 
@@ -47,12 +44,10 @@ align-items: flex-end;
 
 .texto-Titulos-Apartados {
   font-size: 25pt;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Tahoma, sans-serif;
   font-weight: lighter;
-  height: 25px;
+  height: 35px;
   width: 300px;
-  vertical-align: middle;
-  padding: 0em;
 
 
 }
@@ -98,6 +93,11 @@ align-items: flex-end;
   padding: 0;
 } */
 
+footer{
+  position: fixed ;
+  bottom: 0 ;
+  width: 100vw ;
+}
 
   .h-10{
     height: 10vh;
