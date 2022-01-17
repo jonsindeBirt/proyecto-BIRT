@@ -1,19 +1,17 @@
 .links {
-font-weight: bolder;
+font-weight: lighter;
+font-family: Arial, Helvetica, sans-serif;
 text-decoration: none;
-color: red;
+color: black;
 }
-/* .dropdown{
+ .dropdown{
     width: 100%;
 }
 
-.dropdown button{
-    width:100%;
-    font-weight: lighter;
-
-} */
 
 .estilo-desplegable {
+
+    font-weight: lighter;
 font-family: Arial, Helvetica, sans-serif;
 font-size: 20pt;
 height: 20px;

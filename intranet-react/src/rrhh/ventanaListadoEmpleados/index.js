@@ -2,10 +2,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import { Button, Col, Container, Row, Table, Spinner } from "react-bootstrap";
 import { useQuery } from "react-query";
-import { useNavigate } from "react-router-dom";
 import { getEmpleados } from "../services";
 import "./index.css";
-import NavBarGeneral from "../../components/NavBar/navBar";
+import FooterGeneral from "../../components/footer";
 
 function ListadoEmpleados() {
   const [show, setShow] = useState(false);
@@ -21,10 +20,23 @@ function ListadoEmpleados() {
   );
   const navigate = useNavigate();
   return (
-    <Container>
-      <Row>
-        <Col className="d-flex justify-content-end">
-          <Button onClick={() => navigate("./nuevo")}>Nuevo Empleado</Button>
+    <Container className="container">
+      <Row className="primera-row">
+        <Col className="columna-logotipo">
+          <img src={logo} alt="logotipo" className="columna-logotipo"></img>
+        </Col>
+      </Row>
+
+      <Row className="linea-titulos">
+        <Col>
+          <p className="texto-Titulos-Fondo">
+            <h1>Recursos Humanos</h1>
+          </p>
+        </Col>
+        <Col>
+          <p className="texto-Titulos">
+            <h1>Listado Empleados</h1>
+          </p>
         </Col>
       </Row>
 
@@ -102,9 +114,7 @@ function ListadoEmpleados() {
           </tbody>
         </Table>
       </Row>
-      <Row className="colocarAbajo">
-        <NavBarGeneral />
-      </Row>
+      <FooterGeneral />
     </Container>
   );
 }

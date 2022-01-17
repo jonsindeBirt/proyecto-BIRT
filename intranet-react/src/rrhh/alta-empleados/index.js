@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { useMutation, useQueryClient, useQuery } from "react-query";
 import { createEmployee, getDepartamentos } from "../services";
-import { Form, Button, Toast } from "react-bootstrap";
-import FormularioEmpleado from "../components/FormularioEmpleado";
+import { Form, Button, Toast, Row, Col } from "react-bootstrap";
+import logo from "../../assets/logocasinopeq.png";
+import "./index.css";
+import FooterGeneral from "../../components/footer";
 
 function AnyadirEmpleado({ employee, setEdit }) {
   const [empleado, setEmpleado] = useState({
@@ -71,15 +73,32 @@ function AnyadirEmpleado({ employee, setEdit }) {
   // const content = <FormularioEmpleado />;
   return (
     <div className="fondo-color">
-      <h1>Alta de empleados</h1>(
+      <Row className="primera-row">
+        <Col className="columna-logotipo">
+          <img src={logo} alt="logotipo" className="columna-logotipo"></img>
+        </Col>
+      </Row>
+      <Row className="linea-titulos">
+        <Col>
+          <p className="texto-Titulos-Fondo">
+            <h1>&nbsp;&nbsp;&nbsp;Recursos Humanos</h1>
+          </p>
+        </Col>
+        <Col>
+          <p className="texto-Titulos">
+            <h1>Nuevo Empleado</h1>
+          </p>
+        </Col>
+      </Row>
       <Form
+        className="formulario"
         onSubmit={(e) => {
           e.preventDefault();
           mutate(empleado);
         }}
       >
         <Form.Group controlId="formNameControl">
-          <Form.Label>Nombre</Form.Label>
+          <Form.Label className="estilo-label">Nombre</Form.Label>
           <Form.Control
             type="text"
             placeholder="Nombre"
@@ -89,7 +108,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
           />
         </Form.Group>
         <Form.Group controlId="formApellidoControl">
-          <Form.Label>Apellido</Form.Label>
+          <Form.Label className="estilo-label">Apellido</Form.Label>
           <Form.Control
             type="text"
             placeholder="Apellido"
@@ -99,7 +118,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
           />
         </Form.Group>
         <Form.Group controlId="formFechaNacimiento">
-          <Form.Label>Fecha de nacimiento</Form.Label>
+          <Form.Label className="estilo-label">Fecha de nacimiento</Form.Label>
           <Form.Control
             type="date"
             placeholder="Fecha de nacimiento"
@@ -109,8 +128,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
           />
         </Form.Group>
         <Form.Group controlId="formGeneroControl">
-          <Form.Label>Género </Form.Label>
-          <br />
+          <Form.Label className="estilo-label">Género </Form.Label>&nbsp;&nbsp;
           <Form.Check
             type="radio"
             label="F"
@@ -135,7 +153,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
           />
         </Form.Group>
         <Form.Group controlId="formPaisControl">
-          <Form.Label>País</Form.Label>
+          <Form.Label className="estilo-label">País</Form.Label>
           <Form.Control
             type="text"
             placeholder="País"
@@ -145,7 +163,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
           />
         </Form.Group>
         <Form.Group controlId="formCalleControl">
-          <Form.Label>Calle</Form.Label>
+          <Form.Label className="estilo-label">Calle</Form.Label>
           <Form.Control
             type="text"
             placeholder="Calle"
@@ -155,7 +173,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
           />
         </Form.Group>
         <Form.Group controlId="formCpControl">
-          <Form.Label>Código Postal</Form.Label>
+          <Form.Label className="estilo-label">Código Postal</Form.Label>
           <Form.Control
             type="number"
             placeholder="Código Postal"
@@ -165,7 +183,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
           />
         </Form.Group>
         <Form.Group controlId="formCpControl">
-          <Form.Label>Teléfono</Form.Label>
+          <Form.Label className="estilo-label">Teléfono</Form.Label>
           <Form.Control
             type="telephone"
             placeholder="Teléfono"
@@ -178,7 +196,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
           />
         </Form.Group>
         <Form.Group controlId="formEmailControl">
-          <Form.Label>Email</Form.Label>
+          <Form.Label className="estilo-label">Email</Form.Label>
           <Form.Control
             type="email"
             placeholder="Email"
@@ -188,7 +206,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
           />
         </Form.Group>
         <Form.Group controlId="formLocalidadControl">
-          <Form.Label>Localidad</Form.Label>
+          <Form.Label className="estilo-label">Localidad</Form.Label>
           <Form.Control
             type="text"
             placeholder="Localidad"
@@ -198,7 +216,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
           />
         </Form.Group>
         <Form.Group controlId="formPorcentajeControl">
-          <Form.Label>Porcentaje</Form.Label>
+          <Form.Label className="estilo-label">Porcentaje</Form.Label>
           <Form.Control
             type="number"
             placeholder="Porcentaje"
@@ -213,7 +231,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
           />
         </Form.Group>
         <Form.Group controlId="formPuestoControl">
-          <Form.Label>Puesto</Form.Label>
+          <Form.Label className="estilo-label">Puesto</Form.Label>
           <Form.Control
             type="text"
             placeholder="Puesto"
@@ -223,7 +241,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
           />
         </Form.Group>
         <Form.Group controlId="formLoginControl">
-          <Form.Label>Login</Form.Label>
+          <Form.Label className="estilo-label">Login</Form.Label>
           <Form.Control
             type="text"
             placeholder="Login"
@@ -233,7 +251,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
           />
         </Form.Group>
         <Form.Group controlId="formPasswordControl">
-          <Form.Label>Password</Form.Label>
+          <Form.Label className="estilo-label">Password</Form.Label>
           <Form.Control
             type="text"
             placeholder="Password"
@@ -243,7 +261,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
           />
         </Form.Group>
         <Form.Group controlId="formFechaEntrada">
-          <Form.Label>Fecha de entrada</Form.Label>
+          <Form.Label className="estilo-label">Fecha de entrada</Form.Label>
           <Form.Control
             type="date"
             placeholder="Fecha de entrada"
@@ -263,7 +281,7 @@ function AnyadirEmpleado({ employee, setEdit }) {
             />
           </Form.Group> */}
         <Form.Group controlId="formDepartamentoControl">
-          <Form.Label>Departamento</Form.Label>
+          <Form.Label className="estilo-label">Departamento</Form.Label>
           <Form.Select
             onChange={(e) => {
               const departamento = { idDepartamento: e.target.value };
@@ -283,11 +301,19 @@ function AnyadirEmpleado({ employee, setEdit }) {
             ))}
           </Form.Select>
         </Form.Group>
-        <Button variant="primary" type="submit">
-          Crear empleado
-        </Button>
+        <br />
+        <br />
+        <Row className="situacion-boton">
+          <Button className="boton-sombra" type="submit">
+            GUARDAR
+          </Button>
+        </Row>
+
+        <br />
+        <br />
       </Form>
       )
+      <FooterGeneral />
     </div>
   );
 }
