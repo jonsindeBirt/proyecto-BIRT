@@ -4,7 +4,6 @@ import "./index.css";
 import { useMutation, useQueryClient } from "react-query";
 import { login } from "./services";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 
 function Login({ setAuthState }) {
   const [loginState, setLoginState] = useState({
@@ -15,14 +14,12 @@ function Login({ setAuthState }) {
   const [loginError, setLoginError] = useState(false);
   const [loginErrorMessage, setLoginErrorMessage] = useState("");
   const queryClient = useQueryClient();
-  const navigate = useNavigate();
 
   const { mutate } = useMutation(login, {
     onSuccess: ({ data }) => {
       setLoginError(false);
       setLoginErrorMessage("");
       setAuthState(true);
-      navigate("/directorio");
     },
     onError: ({ error }) => {
       setLoginError(true);

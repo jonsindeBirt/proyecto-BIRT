@@ -27,7 +27,6 @@ function App() {
        * Cuando haya un cambio en la ruta del navegador, si coincide con alguna de las rutas, se ejecutará el componente correspondiente.
        */
       <Routes>
-        <Route path="/directorio" element={<Directorio />} />
         <Route path="/calendario" element={<Calendario />} />
         <Route path="/forlumarioTablon" element={<FormularioTablon />} />
         <Route path="/gestion/empleados" element={<ListadoEmpleados />} />
@@ -36,6 +35,7 @@ function App() {
         <Route path="/tiempo" element={<FormularioTablon />} />
         <Route path="/gestion" element={<GestionEmpleados />} />
         <Route path="/listin" element={<ListinTelefonico />} />
+        <Route path="/" element={<Directorio />} />
       </Routes>
     );
   }
