@@ -2,8 +2,6 @@ import { useState } from "react";
 import { useMutation, useQueryClient, useQuery } from "react-query";
 import { createEmployee, getDepartamentos } from "../services";
 import { Form, Button, Toast, Row, Col } from "react-bootstrap";
-import FormularioEmpleado from "../components/FormularioEmpleado";
-import CabeceraEmpleados from "../cabecera-empleados/CabeceraEmpleados";
 import logo from "../../assets/logocasinopeq.png";
 import "./index.css";
 import FooterGeneral from "../../components/footer";

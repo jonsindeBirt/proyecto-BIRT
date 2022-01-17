@@ -8,7 +8,6 @@ import { useQuery } from "react-query";
 import { getEmpleados } from "../services";
 import "./index.css";
 import FooterGeneral from "../../components/footer";
-import logo from "../../assets/logocasinopeq.png";
 
 
 function ListadoEmpleados() {
