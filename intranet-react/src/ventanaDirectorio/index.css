@@ -16,6 +16,7 @@
 .rowBotonListin{
   height: 15vh;
   vertical-align: top;
+  min-height: 300px;
 }
 
 /* .primera-linea {

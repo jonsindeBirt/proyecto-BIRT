@@ -18,8 +18,9 @@ import "./index.css";
 import { useQuery } from "react-query";
 // import { getEmpleados } from "../services";
 import { useNavigate } from "react-router-dom";
-import NavBarGeneral from "../../components/NavBar/navBar";
+import NavBarGeneral from "../../components/NavBar";
 import triangulop from "../../assets/triangulopeq.png";
+import FooterGeneral from "../../components/footer";
 
 function GestionEmpleados() {
   return (
@@ -33,7 +34,7 @@ function GestionEmpleados() {
       <Row className="linea-titulos">
         <Col>
           <p className="texto-Titulos-Fondo">
-            <h1>Recursos Humanos</h1>
+            <h1>&nbsp;Recursos Humanos</h1>
           </p>
         </Col>
         <Col>
@@ -43,7 +44,7 @@ function GestionEmpleados() {
         </Col>
       </Row>
 
-      <Row h-10>
+      <Row>
         <Col> </Col>
         <Col className="apartados-gestion">
           <p
@@ -63,7 +64,7 @@ function GestionEmpleados() {
         <Col> </Col>
       </Row>
 
-      <Row h-10>
+      <Row>
         <Col> </Col>
         <Col className="apartados-gestion">
           {" "}
@@ -81,7 +82,7 @@ function GestionEmpleados() {
         <Col> </Col>
       </Row>
 
-      <Row h-10>
+      <Row>
         <Col> </Col>
         <Col className="apartados-gestion">
           {" "}
@@ -98,10 +99,7 @@ function GestionEmpleados() {
         </Col>
         <Col> </Col>
       </Row>
-
-      <Row>
-        <NavBarGeneral />
-      </Row>
+      <FooterGeneral />
     </Container>
   );
 }

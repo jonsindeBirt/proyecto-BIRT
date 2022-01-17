@@ -2,7 +2,7 @@ import "./App.css";
 import Login from "./login";
 import { Routes, Route } from "react-router-dom";
 import Directorio from "./ventanaDirectorio";
-import Calendario from "./components/calendarioDirectorio";
+import CalendarioFestivos from "./ventanaCalendarioFestivos";
 import useAuth from "./hooks/useAuth";
 import FormularioTablon from "./ventanaAltaAnuncios";
 import ListadoEmpleados from "./rrhh/ventanaListadoEmpleados";
@@ -28,7 +28,7 @@ function App() {
        */
       <Routes>
         <Route path="/directorio" element={<Directorio />} />
-        <Route path="/calendario" element={<Calendario />} />
+        <Route path="/calendario" element={<CalendarioFestivos />} />
         <Route path="/forlumarioTablon" element={<FormularioTablon />} />
         <Route path="/gestion/empleados" element={<ListadoEmpleados />} />
         <Route path="/gestion/empleados/:id" element={<DetalleEmpleado />} />
