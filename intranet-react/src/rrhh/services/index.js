@@ -1,58 +1,11 @@
 // import { url } from "../../environment/index";
-const empleados = [
-  {
-    id: 1,
-    nombre: "Juan",
-    apellido: "Perez",
-    fechaNacimiento: "01/01/2000",
-    genero: "Masculino",
-    pais: "Argentina",
-    calle: "Calle 1",
-    cp: "5000",
-    telefono: "11-1111-1111",
-    email: "email@email.com",
-    localidad: "La Plata",
-    porcentaje: "10",
-    puesto: "Gerente",
-    dni: "12345678",
-    fechaEntrada: "01/01/2020",
-    fechaSalida: "01/01/2021",
-    departamento: [
-      {
-        idDepartamento: 1,
-        nombreDepartamento: "Departamento 1",
-      },
-    ],
-  },
-  {
-    id: 2,
-    nombre: "Juan",
-    apellido: "Perez",
-    fechaNacimiento: "01/01/2000",
-    genero: "Masculino",
-    pais: "Argentina",
-    calle: "Calle 1",
-    cp: "5000",
-    telefono: "11-1111-1111",
-    email: "email@email.com",
-    localidad: "La Plata",
-    porcentaje: "10",
-    puesto: "Gerente",
-    dni: "12345678",
-    fechaEntrada: "01/01/2020",
-    fechaSalida: "01/01/2021",
-    departamento: [
-      {
-        idDepartamento: 1,
-        nombreDepartamento: "Departamento 1",
-      },
-    ],
-  },
-];
+
 async function getEmpleados() {
   //create an array of empleados
 
-  const response = await fetch(`/empleados`).catch((error) => error.response);
+  const response = await fetch(`http://10.2.10.43:8080/empleados`).catch(
+    (error) => error.response
+  );
   if (response.status !== 200) {
     const error = await response.json();
     return Promise.reject(error.error);
@@ -63,7 +16,7 @@ async function getEmpleados() {
 
 async function createEmployee(empleado) {
   console.log(empleado);
-  const response = await fetch(`/empleados`, {
+  const response = await fetch(`http://10.2.10.43:8080/empleados`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -80,7 +33,7 @@ async function createEmployee(empleado) {
 }
 
 async function getEmpleado(id) {
-  const response = await fetch(`/empleados/${id}`).catch(
+  const response = await fetch(`http://10.2.10.43:8080/empleados/${id}`).catch(
     (error) => error.response
   );
   if (response.status !== 200) {
@@ -93,7 +46,7 @@ async function getEmpleado(id) {
 }
 
 async function getDepartamentos() {
-  const response = await fetch(`/departamentos`).catch(
+  const response = await fetch(`http://10.2.10.43:8080/departamentos`).catch(
     (error) => error.response
   );
   if (response.status !== 200) {

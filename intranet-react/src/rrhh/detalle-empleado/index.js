@@ -60,11 +60,13 @@ function DetalleEmpleado() {
     )
   ) : null;
   return (
-    <CabeceraEmpleados
-      children={content}
-      titulo="Detalle empleado"
-      route="../empleados"
-    />
+    <>
+      <CabeceraEmpleados
+        children={content}
+        titulo="Detalle empleado"
+        route="../empleados"
+      />
+    </>
   );
 }
 

@@ -1,11 +1,20 @@
-.tablon-estilos {
+.card {
+  word-wrap: break-word;
+  text-align: justify;
+  padding: 10px 20px;
+  border-radius: 60px;
+  /* margin-top: 100px; */
+  height: auto;
+  word-wrap: word-break;
+  box-shadow: 10px 10px 5px grey;
+  width: 290px;
+}
 
-    word-wrap: break-word;
-    text-align: justify;
-    padding: 20px;
-    border-radius: 60px;
-    margin-top: 100px;
-    height: auto;
-    word-wrap: word-break;
-    box-shadow: 10px 10px 5px grey ;   
-    } 
+.card-body {
+  width: 250px;
+  padding: 10px 20px;
+}
+
+.card-text {
+  margin: 0;
+}

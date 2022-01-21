@@ -1,4 +1,8 @@
 .links {
-    font-weight: bolder;
-    
-    }
+  font-weight: bolder;
+}
+
+.weather {
+  font-weight: bolder;
+  font-size: large;
+}

@@ -1,19 +1,17 @@
-
 /* ESTILOS VENTANA directorio */
 
 .fondo-imagen {
-    background-image: url("../assets/fondo.png");
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    position: relative;
+  background-image: url("../assets/fondo.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
 
-  }
-
-.rowBotonListin{
+.rowBotonListin {
   height: 15vh;
   vertical-align: top;
   min-height: 300px;
@@ -24,120 +22,104 @@
   padding-left: 40px;
   vertical-align: top;
   } */
-  
- 
+
 .columna-tablon {
   vertical-align: bottom;
   margin-right: 50px;
   margin-left: 50px;
-  } 
-   
-.linea-contenedor{
-height: 100vh;
-padding-top: 40px;
 }
 
+.linea-contenedor {
+  height: 100vh;
+  padding-top: 40px;
+}
 
 .linea-uno {
   height: auto;
 }
 
-
-
 .linea-dos {
   align-items: center;
   height: 35vh;
   size-adjust: initial;
-
-} 
-
+}
 
 .columna-logotipo {
   background-color: transparent;
   background-repeat: no-repeat;
   background-image: 1em;
- 
 }
-  .columna-derecha {
-    vertical-align: top;
-    background-color: transparent;
-    padding-top: 20px;
-    background-color: #B5A89B;
+.columna-derecha {
+  vertical-align: top;
+  background-color: transparent;
+  padding-top: 20px;
+  background-color: #b5a89b;
+}
 
-  }
-    
- 
-.boton-listin{
+.boton-listin {
   background-repeat: no-repeat;
   background-color: transparent;
   border-style: none;
-} 
+}
 
 .ajuste-boton {
   width: 20%;
   height: 20%;
 }
 
-.desplegable{
+.desplegable {
   vertical-align: top;
-  width: 100vw;
+  /* width: 100vw; */
   margin-bottom: 20px;
-  }
+}
 
- .calendario {
+.calendario {
   background-size: cover;
   size-adjust: 100vw;
+}
 
- } 
+.row {
+  justify-items: unset;
+}
 
- .row {
-justify-items: unset;
+.h-10 {
+  height: 10vh;
+}
 
- }
-
-  .h-10{
-    height: 10vh;
-  }
-
-.h-20{
+.h-20 {
   height: 20vh;
 }
 
-.h-25{
+.h-25 {
   height: 25vh;
 }
 
-.h-65{
+.h-65 {
   height: 65vh;
 }
-.h-75{
+.h-75 {
   height: 75vh;
 }
-.h35{
+.h35 {
   height: 35vh;
 }
-.h55{
+.h55 {
   height: 55vh;
 }
-.h100{
+.h100 {
   height: 100vh;
 }
 
-.w-100{
+.w-100 {
   width: 100vw;
 }
 
-
-.w-10{
+.w-10 {
   width: 10vw;
-}.w-25{
+}
+.w-25 {
   width: 25vw;
 }
-.r-padding-0{
+.r-padding-0 {
   padding-right: 0 !important;
 }
-
-
-  
-
-  

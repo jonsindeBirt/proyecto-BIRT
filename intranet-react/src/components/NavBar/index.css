@@ -1,14 +1,18 @@
 .navColor {
-    background-color: #646362 !important;
-    height: 25px;
-    vertical-align: bottom;
-    align-items: center;
-    font-weight: bold;
-    text-align: center;
+  background-color: #646362 !important;
+  height: 25px;
+  vertical-align: bottom;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 0 20px;
+  margin: 0 0 0 10px;
+}
 
-    }
-
-.color-me{
-        color:white !important;
-    }
-
+.color-me {
+  color: white !important;
+  cursor: pointer;
+}
+.color-me:hover {
+  color: orange !important;
+}

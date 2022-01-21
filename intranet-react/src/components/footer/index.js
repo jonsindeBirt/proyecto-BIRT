@@ -2,14 +2,11 @@ import "./index.css";
 import NavBarGeneral from "../NavBar";
 import { Row } from "react-bootstrap";
 
-function FooterGeneral() {
-
-    return (
-<Row className="pie">
-<NavBarGeneral  />
-</Row>
-
- );
+function FooterGeneral({ setAuthState }) {
+  return (
+    <Row className="pie">
+      <NavBarGeneral setAuthState={setAuthState} />
+    </Row>
+  );
 }
 export default FooterGeneral;
-

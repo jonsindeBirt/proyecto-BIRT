@@ -5,19 +5,27 @@ import { useQuery } from "react-query";
 import { getEmpleados } from "../services";
 import "./index.css";
 import FooterGeneral from "../../components/footer";
+import { useNavigate } from "react-router-dom";
+import logo from "../../assets/logocasinopeq.png";
 
-function ListadoEmpleados() {
+function ListadoEmpleados({ setAuthState }) {
   const [show, setShow] = useState(false);
-  const { status, empleados, error, isFetching } = useQuery(
+  const { status, data, error, isFetching } = useQuery(
     "empleados",
     getEmpleados,
     {
+      onSuccess: (empleados) => {
+        console.log(empleados);
+      },
       onError: (error) => {
         setShow(true);
       },
       refetchOnWindowFocus: false,
     }
   );
+  if (data) {
+    console.log(data);
+  }
   const navigate = useNavigate();
   return (
     <Container className="container">
@@ -63,8 +71,8 @@ function ListadoEmpleados() {
             </tr>
           </thead>
           <tbody>
-            {status === "success" && empleados && !error ? (
-              empleados.map((empleado) => {
+            {status === "success" && data && !error ? (
+              data.map((empleado) => {
                 return (
                   <tr
                     key={empleado.id}
@@ -114,7 +122,9 @@ function ListadoEmpleados() {
           </tbody>
         </Table>
       </Row>
-      <FooterGeneral />
+      <Row>
+        <FooterGeneral setAuthState={setAuthState} />
+      </Row>
     </Container>
   );
 }

@@ -22,7 +22,7 @@ import NavBarGeneral from "../../components/NavBar";
 import triangulop from "../../assets/triangulopeq.png";
 import FooterGeneral from "../../components/footer";
 
-function GestionEmpleados() {
+function GestionEmpleados({ setAuthState }) {
   return (
     <Container className="container">
       <Row className="primera-row">
@@ -81,25 +81,7 @@ function GestionEmpleados() {
         </Col>
         <Col> </Col>
       </Row>
-
-      <Row>
-        <Col> </Col>
-        <Col className="apartados-gestion">
-          {" "}
-          <p className="texto-Titulos-Apartados">
-            <Button
-              type="Input"
-              href="/altaEmpleados"
-              img
-              src={triangulop}
-              className="triangulo"
-            ></Button>{" "}
-            Modificación
-          </p>{" "}
-        </Col>
-        <Col> </Col>
-      </Row>
-      <FooterGeneral />
+      <FooterGeneral setAuthState={setAuthState} />
     </Container>
   );
 }

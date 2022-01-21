@@ -1,6 +1,5 @@
-.pie{
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    margin-bottom: 20px;
+.pie {
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
