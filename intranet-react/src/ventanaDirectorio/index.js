@@ -16,43 +16,38 @@ import MysteryJackpot from "../components/figureMysteryJackpot";
 import ZeJackpot from "../components/figureZejackpot";
 import ElTiempo from "../components/figureElTiempo";
 import BotonListin from "../components/botonListin";
-// import { handleSubmit } from "react-final-form";
+import FooterGeneral from "../components/footer";
 
-
-function Directorio() {
-
-
-  
+function Directorio({ setAuthState }) {
   return (
     <Container fluid className="fondo-imagen">
       <Row className="linea-contenedor">
         <Row>
           <Col className="linea-uno" md lg="auto">
             <img src={logo} alt="logotipo" className="columna-logotipo"></img>
-          </Col>
-
-          <Col className="columna-tablon">
             <Tablon lg md="8" className="tablon" />
           </Col>
 
+          <Col className="columna-tablon"></Col>
+
           <Col md="3" className="columna-derecha">
-
-    
             <Row className="lineaListin">
-            <Button className="boton-listin"  type="button" id="botonListin" name="botonListin" href="/listin" >
-       <Image className="ajuste-boton" src={iconoListin} fluid />
-  </Button> 
+              <Button
+                className="boton-listin"
+                type="button"
+                id="botonListin"
+                name="botonListin"
+                href="/listin"
+              >
+                <Image className="ajuste-boton" src={iconoListin} fluid />
+              </Button>
             </Row>
 
-            <Row className="desplegable">
-            </Row>
+            <Row className="desplegable"></Row>
 
-            
-            
             <Row className="desplegable">
               <DesplegableRRHH />
             </Row>
-
           </Col>
         </Row>
         <Row className="linea-dos">

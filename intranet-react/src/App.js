@@ -11,8 +11,6 @@ import DetalleEmpleado from "./rrhh/detalle-empleado";
 import GestionEmpleados from "./rrhh/ventanaGestionEmpleados";
 import ListinTelefonico from "./ventanaListin";
 import React from "react";
-import DesplegableRRHH from "./components/desplegableRecursos";
-
 function App() {
   // esto es un hook personalizado. lo usamos para verificar si el usuario esta logueado o no
   const { authState, setAuthState } = useAuth();
@@ -26,17 +24,34 @@ function App() {
        * Usamos Routes para agrupar las rutas que tendrá nuestra aplicación.
        * Cuando haya un cambio en la ruta del navegador, si coincide con alguna de las rutas, se ejecutará el componente correspondiente.
        */
-      <Routes>
-        <Route path="/calendario" element={<CalendarioFestivos />} />
-        <Route path="/forlumarioTablon" element={<FormularioTablon />} />
-        <Route path="/gestion/empleados" element={<ListadoEmpleados />} />
-        <Route path="/gestion/empleados/:id" element={<DetalleEmpleado />} />
-        <Route path="/gestion/empleados/nuevo" element={<AnyadirEmpleado />} />
-        <Route path="/tiempo" element={<FormularioTablon />} />
-        <Route path="/gestion" element={<GestionEmpleados />} />
-        <Route path="/listin" element={<ListinTelefonico />} />
-        <Route path="/" element={<Directorio />} />
-      </Routes>
+      <>
+        <Routes>
+          <Route path="/calendario" element={<CalendarioFestivos />} />
+          <Route path="/forlumarioTablon" element={<FormularioTablon />} />
+          <Route
+            path="/gestion"
+            element={<GestionEmpleados setAuthState={setAuthState} />}
+          />
+          <Route
+            path="/gestion/empleados"
+            element={<ListadoEmpleados setAuthState={setAuthState} />}
+          />
+          <Route
+            path="/gestion/empleados/:id"
+            element={<DetalleEmpleado setAuthState={setAuthState} />}
+          />
+          <Route
+            path="/gestion/empleados/nuevo"
+            element={<AnyadirEmpleado setAuthState={setAuthState} />}
+          />
+          <Route path="/tiempo" element={<FormularioTablon />} />
+          <Route path="/listin" element={<ListinTelefonico />} />
+          <Route
+            path="/"
+            element={<Directorio setAuthState={setAuthState} />}
+          />
+        </Routes>
+      </>
     );
   }
 }

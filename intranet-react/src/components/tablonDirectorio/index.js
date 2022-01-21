@@ -4,28 +4,39 @@ import { Card } from "react-bootstrap";
 import "./index.css";
 
 function Tablon() {
+  const cards = [
+    {
+      title: "Anuncio 1",
+      subtitle: "Subtitulo 1",
+      content: "Contenido del anuncio 1",
+      link: "",
+    },
+    {
+      title: "Anuncio 2",
+      subtitle: "Subtitulo 2",
+      content: "Contenido del anuncio 2",
+      link: "",
+    },
+    {
+      title: "Anuncio 3",
+      subtitle: "Subtitulo 3",
+      content: "Contenido del anuncio 3",
+      link: "",
+    },
+  ];
   return (
-    <Card className="tablon-estilos">
-      <Card.Body>
-        <Card.Title>
-          <h1>Tablón de anuncios</h1>
-        </Card.Title>
-        <Card.Subtitle className="card-title">
-          <h1>Anuncio 1</h1>
-        </Card.Subtitle>
-        <Card.Subtitle>Creado</Card.Subtitle>
-        <Card.Text>
-          Aquí va el contenido del anuncio número uno Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Vestibulum in diam ultrices,
-          interdum ligula dignissim, volutpat ipsum. Nulla dictum suscipit
-          semper. Fusce fringilla, arcu eu porttitor commodo, erat nibh sagittis
-          magna, nec mattis mauris enim in arcu. Sed venenatis nisl in dui
-          ornare dapibus. Etiam augue odio, dignissim eu metus eu, rutrum
-          pellentesque leo. Ut sollicitudin
-        </Card.Text>
-        <Card.Link href="/forlumarioTablon">Ver más</Card.Link>
-      </Card.Body>
-    </Card>
+    <div>
+      {cards.map((card) => (
+        <Card>
+          <Card.Body>
+            <Card.Title className="card-title">{card.title}</Card.Title>
+            <Card.Subtitle>{card.subtitle}</Card.Subtitle>
+            <Card.Text>{card.content}</Card.Text>
+            <Card.Link href={card.link}>Ver más</Card.Link>
+          </Card.Body>
+        </Card>
+      ))}
+    </div>
   );
 }
 export default Tablon;

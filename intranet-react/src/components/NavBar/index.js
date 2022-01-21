@@ -1,20 +1,27 @@
-
-import { Container, Row, Col, Table, Toast, Button, Navbar, NavDropdown, Nav } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import "./index.css";
+import { useNavigate } from "react-router-dom";
 
+function NavBarGeneral({ setAuthState }) {
+  const navigate = useNavigate();
 
-function NavBarGeneral() {
+  function handleClick(e) {
+    setAuthState(false);
+    navigate("/");
+  }
 
-    return (
-
-<Navbar className="navColor" >
-<Container >
-<Nav >
-  <Nav.Link href="#" className="color-me">Logout</Nav.Link> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <Nav.Link href="/directorio" className="color-me">Directorio</Nav.Link>
-</Nav>
-</Container>
-</Navbar >
- );
+  return (
+    <Navbar className="navColor">
+      <Nav>
+        <Navbar.Text onClick={() => handleClick()} className="color-me">
+          Logout
+        </Navbar.Text>{" "}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Nav.Link href="/" className="color-me">
+          Directorio
+        </Nav.Link>
+      </Nav>
+    </Navbar>
+  );
 }
 export default NavBarGeneral;

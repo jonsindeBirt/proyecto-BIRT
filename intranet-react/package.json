@@ -46,7 +46,6 @@
   "optionalDependencies": {
     "utf-8-validate": "^5.0.7"
   },
-  "proxy": "http://10.2.10.43:8080",
   "devDependencies": {
     "@babel/preset-react": "^7.16.0"
   }

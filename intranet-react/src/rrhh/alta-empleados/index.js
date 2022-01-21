@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import { useMutation, useQueryClient, useQuery } from "react-query";
-import { createEmployee, getDepartamentos } from "../services";
-import { Form, Button, Toast, Row, Col } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Button, Col, Form, Row } from "react-bootstrap";
+import { useMutation, useQuery, useQueryClient } from "react-query";
 import logo from "../../assets/logocasinopeq.png";
+import { createEmployee, getDepartamentos } from "../services";
 import "./index.css";
 import FooterGeneral from "../../components/footer";
 
-function AnyadirEmpleado({ employee, setEdit }) {
+function AnyadirEmpleado({ employee, setAuthState }) {
   const [empleado, setEmpleado] = useState({
     nombre: "",
     foto: null,
@@ -313,7 +313,9 @@ function AnyadirEmpleado({ employee, setEdit }) {
         <br />
       </Form>
       )
-      <FooterGeneral />
+      <Row>
+        <FooterGeneral setAuthState={setAuthState} />
+      </Row>
     </div>
   );
 }

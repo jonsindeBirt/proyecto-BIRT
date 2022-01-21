@@ -21,9 +21,13 @@ function Login({ setAuthState }) {
       setLoginErrorMessage("");
       setAuthState(true);
     },
-    onError: ({ error }) => {
+    onError: (error) => {
       setLoginError(true);
-      setLoginErrorMessage(error.message);
+      if (error === "El usuario no existe") {
+        setLoginErrorMessage(error);
+      } else {
+        setLoginErrorMessage("Contraseña incorrecta");
+      }
     },
     onSettled: () => {
       queryClient.invalidateQueries("create");
@@ -105,7 +109,7 @@ function Login({ setAuthState }) {
                   className="recuadros-textos"
                   id="email"
                   name="email"
-                  type="email"
+                  type="text"
                   value={loginState.email}
                   onChange={handleChange}
                 />
