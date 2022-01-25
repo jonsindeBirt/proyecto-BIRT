@@ -29,7 +29,7 @@ function DetalleEmpleado() {
       <Card style={{ width: "18rem" }}>
         <Card.Header className="justify">
           <Button variant="light" onClick={() => setIsEdit(true)}>
-            Edit
+            Editar
           </Button>
         </Card.Header>
         <Card.Body>
@@ -64,7 +64,7 @@ function DetalleEmpleado() {
       <CabeceraEmpleados
         children={content}
         titulo="Detalle empleado"
-        route="../empleados"
+        route="../gestion/empleados"
       />
     </>
   );

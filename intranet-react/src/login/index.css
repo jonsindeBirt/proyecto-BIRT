@@ -8,18 +8,17 @@
 }
 
 .logotipo-superior {
-max-width: 30vw;    
+  max-width: 30vw;
 }
 
-.alinearLoginYFlecha{
-vertical-align: top;
-padding-top: 20vh;
-
+.alinearLoginYFlecha {
+  vertical-align: top;
+  padding-top: 20vh;
 }
 
 .recuadro-marron-login {
-  color:white;
-  font-weight:lighter; 
+  color: white;
+  font-weight: lighter;
   font-size: 7vh;
   text-align: center;
   background-color: #646362;
@@ -27,22 +26,26 @@ padding-top: 20vh;
   width: 20vh;
 }
 .bienvenidos {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-style: italic;
   font-size: 10vh;
   color: #747372;
   text-align: center;
 }
-.triangulo {
-  background-image: url("../assets/triangulologin.png");
+.triangulo-login {
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
   padding: 0;
   background-size: cover;
- 
-
+  height: 100%;
+  width: 5vh;
+  cursor: pointer;
 }
+
+/* .triangulo-login img {
+  cursor: pointer;
+} */
 
 /* .tituloscasillas {
   font-family: Arial, Helvetica, sans-serif;
@@ -52,7 +55,6 @@ padding-top: 20vh;
   text-align: left;
 } */
 
-
 .recuadros-textos {
   width: 90%;
   background-color: white;
@@ -60,34 +62,33 @@ padding-top: 20vh;
   height: 3em;
 }
 
-.submit-button{
+.submit-button {
   height: 11vh;
   width: 20vh;
   margin-bottom: 1rem;
 }
 
 .estiloTextosCasillas {
-color: white;
-white-space: 20px;
+  color: white;
+  white-space: 20px;
 }
 
-.h-35{
+.h-35 {
   height: 35vh;
 }
-.h-32{
+.h-32 {
   height: 32vh;
 }
 
-.h-65{
+.h-65 {
   height: 65vh;
 }
 
-.r-padding-0{
+.r-padding-0 {
   padding-right: 0 !important;
 }
 
-.login-error-msg{
+.login-error-msg {
   color: red;
   font-size: 1.5rem;
 }
-
