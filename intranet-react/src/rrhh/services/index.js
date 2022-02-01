@@ -57,4 +57,38 @@ async function getDepartamentos() {
   return data;
 }
 
-export { getEmpleados, createEmployee, getDepartamentos, getEmpleado };
+async function getDirectorio() {
+  //create an array of empleados
+
+  const response = await fetch(`http://10.2.10.43:8080/directorio`).catch(
+    (error) => error.response
+  );
+  if (response.status !== 200) {
+    const error = await response.json();
+    return Promise.reject(error.error);
+  }
+  const data = await response.json();
+  return data;
+}
+async function getCalendario() {
+  //create an array of empleados
+
+  const response = await fetch(`http://10.2.10.43:8080/diasfestivos`).catch(
+    (error) => error.response
+  );
+  if (response.status !== 200) {
+    const error = await response.json();
+    return Promise.reject(error.error);
+  }
+  const data = await response.json();
+  return data;
+}
+
+export {
+  getEmpleados,
+  createEmployee,
+  getDepartamentos,
+  getEmpleado,
+  getDirectorio,
+  getCalendario,
+};

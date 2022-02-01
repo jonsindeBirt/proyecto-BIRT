@@ -4,6 +4,7 @@ import "./index.css";
 import { useMutation, useQueryClient } from "react-query";
 import { login } from "./services";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import triangulo from "../assets/triangulologinmarron - copia.png";
 
 function Login({ setAuthState }) {
   const [loginState, setLoginState] = useState({
@@ -34,12 +35,12 @@ function Login({ setAuthState }) {
     },
   });
 
-  function handleSubmit(evt) {
+  function handleSubmit() {
     /*
         Previene el comportamiento default de los
         formularios el cual recarga el sitio
       */
-    evt.preventDefault();
+    // evt.preventDefault();
     // Aquïż½ puedes usar values para enviar la informaciïż½n
     mutate(loginState);
   }
@@ -89,7 +90,9 @@ function Login({ setAuthState }) {
         <Col lg={2} className="columna-derecha">
           <form onSubmit={handleSubmit}>
             <Row className="alinearLoginYFlecha">
-              <Button type="submit" className="triangulo"></Button>
+              <div className="triangulo-login" onClick={() => handleSubmit()}>
+                <img src={triangulo} alt="triangulo" />
+              </div>
             </Row>
 
             <Row>
@@ -121,7 +124,7 @@ function Login({ setAuthState }) {
                 <br />
 
                 <label className="estiloTextosCasillas" htmlFor="password">
-                  Contrase�a
+                  Contraseña
                 </label>
               </Col>
               <Col xs={12}>

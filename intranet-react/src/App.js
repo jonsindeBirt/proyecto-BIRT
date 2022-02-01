@@ -26,7 +26,10 @@ function App() {
        */
       <>
         <Routes>
-          <Route path="/calendario" element={<CalendarioFestivos />} />
+          <Route
+            path="/calendario"
+            element={<CalendarioFestivos setAuthState={setAuthState} />}
+          />
           <Route path="/forlumarioTablon" element={<FormularioTablon />} />
           <Route
             path="/gestion"
@@ -45,7 +48,10 @@ function App() {
             element={<AnyadirEmpleado setAuthState={setAuthState} />}
           />
           <Route path="/tiempo" element={<FormularioTablon />} />
-          <Route path="/listin" element={<ListinTelefonico />} />
+          <Route
+            path="/listin"
+            element={<ListinTelefonico setAuthState={setAuthState} />}
+          />
           <Route
             path="/"
             element={<Directorio setAuthState={setAuthState} />}

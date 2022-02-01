@@ -28,7 +28,7 @@ function AnyadirEmpleado({ employee, setAuthState }) {
   const [createErrorMessage, setCreateErrorMessage] = useState(null);
   const queryClient = useQueryClient();
 
-  const { departments } = useQuery("departamentos", getDepartamentos, {
+  const { data } = useQuery("departamentos", getDepartamentos, {
     onError: () => {},
     refetchOnWindowFocus: false,
   });
@@ -291,12 +291,12 @@ function AnyadirEmpleado({ employee, setAuthState }) {
               });
             }}
           >
-            {departments?.map((departamento) => (
+            {data?.map((departamento) => (
               <option
                 key={departamento.idDepartamento}
                 value={departamento.idDepartamento}
               >
-                {departamento.idDepartamento}
+                {departamento.nombreDepartamento}
               </option>
             ))}
           </Form.Select>

@@ -1,26 +1,9 @@
-import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  Container,
-  Row,
-  Col,
-  Table,
-  Toast,
-  Button,
-  Navbar,
-  NavDropdown,
-  Nav,
-  Image,
-} from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import logo from "../../assets/logocasinopeq.png";
-import { Label } from "reactstrap";
-import "./index.css";
-import { useQuery } from "react-query";
-// import { getEmpleados } from "../services";
-import { useNavigate } from "react-router-dom";
-import NavBarGeneral from "../../components/NavBar";
 import triangulop from "../../assets/triangulopeq.png";
 import FooterGeneral from "../../components/footer";
+import "./index.css";
 
 function GestionEmpleados({ setAuthState }) {
   return (
