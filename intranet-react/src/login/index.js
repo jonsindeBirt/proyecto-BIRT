@@ -124,7 +124,7 @@ function Login({ setAuthState }) {
                 <br />
 
                 <label className="estiloTextosCasillas" htmlFor="password">
-                  Contrase�a
+                  Contraseña
                 </label>
               </Col>
               <Col xs={12}>

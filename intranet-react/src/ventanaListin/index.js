@@ -5,15 +5,15 @@ import logo from "../assets/logocasinopeq.png";
 import { Label } from "reactstrap";
 import "./index.css";
 import { useQuery } from "react-query";
-import { getEmpleados } from "../rrhh/services";
+import { getDirectorio } from "../rrhh/services";
 import { useNavigate } from "react-router-dom";
 import FooterGeneral from "../components/footer";
 
-function ListinTelefonico() {
+function ListinTelefonico({ setAuthState }) {
   const [show, setShow] = useState(false);
   const { status, data, error, isFetching } = useQuery(
     "listin",
-    getEmpleados,
+    getDirectorio,
     {
       onError: (error) => {
         console.log(error);
@@ -24,7 +24,6 @@ function ListinTelefonico() {
   );
 
   const navigate = useNavigate();
-
 
   return (
     <Container className="container">
@@ -54,11 +53,8 @@ function ListinTelefonico() {
           <thead>
             <tr>
               <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Fecha de Nacimiento</th>
               <th>Telefono</th>
               <th>Email</th>
-              <th>Departamento</th>
             </tr>
           </thead>
           <tbody>
@@ -70,25 +66,9 @@ function ListinTelefonico() {
                       style={{ cursor: "pointer" }}
                       onClick={() => navigate(`./${empleado.id}`)}
                     >
-                      <td>{empleado.nombre}</td>
-                      <td>{empleado.apellido}</td>
-                      <td>{empleado.fechaNacimiento}</td>
+                      <td>{empleado.nombreDirectorio}</td>
                       <td>{empleado.telefono}</td>
                       <td>{empleado.email}</td>
-                      <td>{empleado.nombreDepartamento}</td>
-                      <td>
-                        <ul>
-                          {empleado.departamento.map((departamento) => {
-                            return (
-                              <li key={departamento.idDepartamento}>
-                                <a href={`mailto:${departamento.email}`}>
-                                  {departamento.nombreDepartamento}
-                                </a>
-                              </li>
-                            );
-                          })}
-                        </ul>
-                      </td>
                     </tr>
                   );
                 })
@@ -96,7 +76,7 @@ function ListinTelefonico() {
           </tbody>
         </Table>
       </Row>
-      <FooterGeneral />
+      <FooterGeneral setAuthState={setAuthState} />
     </Container>
   );
 }
